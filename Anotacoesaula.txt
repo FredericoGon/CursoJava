@@ -2498,6 +2498,33 @@ Eu sou responsável por fazer o Header e o componente Painel Lista de Tarefas
 
 Aula 44 e 45 estive fora =/
 
-Aula46------------------------------------------------------------------------------------------------------------------------------------------------------
+Aula46-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Template da listagem
+
+Aula47-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Fiz Login e template-login
+
+usuario
+
+nome nao vazio
+
+email has @
+
+senha no mínimo 8 digitos
+
+e-mail:
+
+<p:outputLabel value="Email:" for="email" />
+						<p:inputText id="email" value="#{usuarioBean.email}"
+							style="width:95%" disabled="#{!usuarioBean.podeEditar}"
+							validatorMessage="Email inválido (nome@provedor.com)">  ///////////
+							<f:attribute name="type" value="email" />
+							<f:passThroughAttribute name="placeholder"
+								value="Digite o E-mail"></f:passThroughAttribute>
+							<f:validateRegex pattern=".+@.+"></f:validateRegex>   /////////////
+							<f:ajax event="blur" render="messageEmail" />
+						</p:inputText>
+						<p:message for="email" id="messageEmail" />
+

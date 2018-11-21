@@ -1,0 +1,2503 @@
+Intro
+
+https://docs.oracle.com/javase/8/docs/api/index.html
+
+felipe.darosaoliveira@gmail.com
+
+https://github.com/felipedarosaoliveira
+
+Anotações Gerais-------------------------------------------------------------------------------------------------------------------------------------------
+
+Aprender a olhar a documentação melhor
+
+Estudar Classe Anônima e Lambda ->
+
+
+No PGadmin4 para resetar a senha do usuário e ficar compatível com os projetos que temos feito.
+ALTER USER postgres WITH ENCRYPTED PASSWORD 'admin';
+
+
+Baixar o TomCat em casa, é só um .zip
+
+Estudar Kanban e Scrum para TI
+
+Estudar JSF
+
+Prime Faces
+
+Aula 02-------------------------------------------------------------------------------------------------------------------------------------------------
+
+1) Dado um retângulo de base 20 e altura 30. Escreva um programa que: calcule e apresente os seguintes valores:
+a) A área do retângulo
+b) O perímetro do retângulo
+
+2) Dado um círculo de 30cm de diâmetro, calcule e apresente o valor da área deste círculo.
+
+3) Dados as notas 10, 7
+
+4) Dado que um veículo percorre uma distância de 200km em 240min, calcule a velocidade média em km/h.
+
+5) Escreva um programa que calcule o valor de 7 alevado na potência de 5.
+
+6) Utilizando a classe math, crie um programa que calcule e apresente o maior número entre 10, 15 e 20.
+
+7) Utilizando a classe Math crie um programa que apresente o valor inteiro referente ao número 13.36543
+
+8) Utilizando a classe math, crie um programa que escreva o valor absoluto dos números -10, 20, -50 e -1000.
+
+
+
+
+
+
+
+Aula03 ------------------------------------------------------------------------------------------------------------------------------------------------
+
+O que faz o System.in na classe Scanner?
+Monitora a entrada padrão do sistema. (que é o teclado)
+
+Importar pacotes fica entre Package e Classe main, exemplo:
+
+//
+package Pacote;
+
+import java.util.Scanner;
+
+public class Atividade01 {
+	public static void main(String[] args){
+}
+//
+
+Estudar printf = %s
+
+Conversão
+ParseInt da classe Integer transforma String em Int, tem também ParseDouble na clase Double, ParseByte na classe Byte, entre outros
+
+Primitivo --> Classe "Objeto"
+
+byte - Byte
+short - Short
+boolean - Boolean
+char - Character
+int - Integer
+long - Long
+Float - Float
+double - Double
+
+Exercicios
+
+1) Escreva um progamar que solicite dois números e em seguida escreva o valor do maior número informado. Utilize Math.max
+
+2) Escreva um programa que solicite 3 números reais e em seguida apresente o resultado da média dos números informados.
+
+3) Escreva um programa que solicite a idade de um usuário e em seguida apresente a idade do usuário após 20 anos.
+
+4) Escreva um programa que solicite a idade do usuário em anos e apresente o valor da idade informada em mese.
+
+5) Escreva um programa que solicite a idade do usuário em dias e em seguida apresente o valor em dias meses e anos.
+Considere que cada mês possui 30 dias e que um ano equivale a 12 meses.
+
+6) Escreva um programa que solicite o valor de um produto e o percentual de desconto,
+em seguida o programa deve apresentar o valor do desconto e o valor do produto após aplicação do desconto.
+
+7) Escreva um programa que solicite 3 notas e em seguida calcule e apresente os seguintes dados:
+	a) O valor médio;
+	b) O valor da maior nota (Math.max);
+	c) O valor da menor nota (Math.min);
+
+8) Escreva um programa que solicite a base e a altura de um triângulo e em seguida calcule o valor da área.
+
+9) Escreva um programa que solicite 3 notas e em seguida calcule a média ponderada aplicando os pesos 2, 3 e 5 respectivamente.
+Ao final o programa deve apresentar o resultado da mádia calculada.
+
+10) Escreva um programa que solicite o peso e a altura de uma pessoa e em seguida calcule o IMC desta pessoa. IMC = peso / (altura + altura).
+
+Aula04 -------------------------------------------------------------------------------------------------------------------------------------
+
+Praticar mais com o Git, fazer novo repositório e usar os comandos através do terminal.
+
+Maven, o que é??
+
+Operadores de comparação:
+
+>
+>=
+<
+<=
+!=
+==
+
+resultado de comparação é boleano, portanto tipificado como boolean no Java (true ou false)
+
+Operadores lógicos:
+
+&&  - e (somente se for True True na tabela verdade)
+||  - ou (Se qualquer um for T na tabela verdade)
+!   - não (inverte)
+^   - ou exclusivo (somente se for true false ou false true)
+
+também retornam boleano, portanto tipificado como boolean no Java (true ou false)
+
+& e | saõ operadores de curto circuito, se o compilador achar a resposta lendo a primeira parta da comparação, ele não vai ler a segunda.
+
+if(exp){     exp = pode ser qualquer expressão, desde que retorne boolean
+
+}
+
+Aula05--------------------------------------------------------------------------------------------------------------------------------------
+
+Operadores Unários
+
+++
+--
+
+pré-incremento
+ex.: int numero = 10;
+System.out.println(numero);
+System.out.println(++numero);
+System.out.println(numero);
+
+Console:
+10
+11
+11
+
+pós-incremento
+ex.: int numero2 = 20;
+System.out.println(numero2);
+System.out.println(numero2++);
+System.out.println(numero2);
+
+console:
+20
+20
+21
+
+pré-decremento
+ex.: int numero3 = 10;
+System.out.println(numero3);
+System.out.println(--numero3);
+System.out.println(numero3);
+
+Console:
+10
+9
+9
+
+pós-decremento
+ex.: int numero4 = 20;
+System.out.println(numero4);
+System.out.println(numero4--);
+System.out.println(numero4);
+
+console:
+20
+20
+19
+
+Operadores Compostos
+
++=
+-=
+*=
+/=
+%=
+
+ex.:
+System.out.println("(+=)")
+int num = 10;
+int num2 = 5;
+num += num2; // num = num + num2
+System.out.prinln(num);
+
+System.out.println("(-=)")
+num -= num2; // num = num - num2
+System.out.prinln(num);
+
+System.out.println("(*=)")
+num *= num2; // num = num * num2
+System.out.prinln(num);
+
+System.out.println("(/=)")
+num /= num2; // num = num / num2
+System.out.prinln(num);
+
+System.out.println("(%=)")
+num %= num2; // num = num % num2
+System.out.prinln(num);
+
+console:
+15
+10
+50
+10
+0
+
+detalhe:
+
+int n1 = 10;
+n1 *= 2=8;  // n1 = n1*(2+8)
+System.out.prinln(n1);
+
+console:
+100
+
+Exercícios
+1) Crie um programa que solicite um número entre 1 e 12, em seguida escreva o nome do mês correspondente ao número digitado.
+Caso o usuário informe um número fora do range (1-12), o programa deve apresentar uma mensagem indicando que o número informado é inválido.
+2) Crie um programa que solicite um número entre 1 e 3 para o usuário. Em seguida escreva uma mensagem informando o valor da opção selecionada.
+As mensagens devem ser de acordo com a tabela abaixo:
+1 - Sacar
+2 - Depositar
+3 -Verificar Saldo
+![1-3] - Opção inválida
+
+Laços de repetição
+
+While - Enquanto
+
+ex.:
+int numero = 10;
+while(numero<=20){
+	System.out.println(numero++);
+}
+
+Há o continue e o break que manipulam a instrução do while.
+
+meulabel:  // Para assegura uma identação do comando break no while de fora
+	while (){
+	while (){
+		if (){
+			break meulabel;
+}
+}
+}
+
+Exercicios
+3) Escreva um programa que imprima o resultado da soma dos 50 primeiros numeros inteiros positivos.
+4) Escreva um programa que solicite 3 notas e em seguida calcule e apresente o valor da médias dass notas.
+O programa deve ser executado até que a primeira nota tenha um valor negativo.
+5) Escreva um programa que escreva todos os números ímpares entre 1 e 100.
+6) Escreva um programa que escreva todos os números primos entre 1 e 50. Considere como número primo o número que é apenas divisível por 1 por ele mesmo.
+7) Escreva um programa que apresente o menu abaixo para o usuário, e após a escolha do usuário apresente uma mensagem correspondentte ao tipo de operação selecionada.
+O programa deve continuar executando até que o usuário excolha a opção sair.
+Caso o usuário escolha uma opção diferente, deve apresentar a mensagem "Opção inválida".
+	1 - Cadastrar Aluno      -> Escolheu a opção cadastrar Aluno
+	2 - Cadastrar Professor  -> Escolheu a opção Cadastrar Professor
+	3 - Cadastrar Turma      -> Escolheu a opção Cadastrar Turma
+	4 - Sair                 -> Escolheu a opção Sair
+
+Aula07-----------------------------------------------------------------------------------------------------------------------------------------------
+
+For
+
+ex.;
+
+for(int index = 0; index<10; index++){
+	System.out.printf("%d ",index);
+}
+fim
+
+3 parametros (constatação; comparação com resultado booleano; incremento)
+
+// Estudar os print
+
+Exercicios
+Utilizando o comando for excute os exercicios abaixo:
+1) Crie um porgrama que solicite um número entre 1 e 20 e em seguida calcule e apresente o valor do fatorial do número informado.
+2) Crie um porgrama que apresente os números pares entre 100 e 200.
+3) Crie um porgrama que solicite 5 números e em seguida escreva o valor do maior número informado.
+4) Crie um porgrama que solicite 5 números e em seguida apresente o valor da soma dos números e da média.
+5) Crie um porgrama que solicite uma frase e em seguida apresente as letras dos índices ímpares.
+6) Crie um porgrama que solicite uma palavra e em seguida escreva a palavra de forma inversa. Ex.: Felipe => epileF.
+7) Crie um porgrama que imprima os valores abaixo no console:
+X
+XX
+XXX
+XXXX
+XXXXX
+
+8) Crie um porgrama que imprima os valores abaixo no console:
+#####
+####
+###
+##
+#
+
+Aula08--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Array
+
+ex.:
+
+int[] numeros;
+String nomes[];
+numeros = new int[10]; //capacidade de 10
+nomes = new String[3];
+
+String[] frutas = {"Abacaxi", "Banana", "Pêssego"}; //a capacidade nesse caso é a quantidade de itens
+double[] medias = new double[3];
+int[] notas = new int {10,9,8,10,9,8};
+int[] notas2 = {10,9,8,10,9,8};// forma resumida da de cima
+
+int[] notas3 = new int[5];
+notas3 = new int[]{100}; //susbtitui a antiga array, perde a informação anterior
+
+.length retorna a capacidade da array, não a quantidade de itens declarados. Pois quando você cria a array, ela é criada preenchida com valores null para string
+ ou 0.0 para double e assim por diante.
+		//curiosidade
+		char i = "Fred".charAt(2);
+
+Exercicios
+1) Crie um programa que solcite 10 notas e em seguida calcule a médias das notas e escreva as notas digitas juntamente com o valor da média.
+2) Crie um programa que crie um array com os valores 1,3,2 e em seguida processe o array para que os valores se posicionem na forma 3,2,1.
+3) Crie um programa que solcite 5 notas e em seguida apresente o valor da maior nota juntamente com a posição da nota dentro do array.
+4) Crie um programa que solcite o nome de 10 pessoas e em seguida apresente os nomes informados na ordem inversa. (O último nome deve ser o primeiro).
+
+Livro - algoritimos em JAVA
+
+Aula09------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Estudar array bidimensional
+
+O que raios é for it??
+
+exemplo1) Data a matriz abaixo calcule a soma dos valores da sua diagonal principal.
+|10,09,08|
+|07,09,10|
+|10,07,08|
+mesma linha e coluna
+
+Exercicios
+1) Escreva um programa que solicite 3 notas para uma turma de 10 alunos e em seguida calcule a média de cada aluno juntamente com a média da turma 
+ao final o programa deve apresentar as 3 notas do aluno juntamente com a sua média  e posteriormente deve apresentar a média final da turma.
+2)Data a tabela abaixo:
+    meias  camisas  camisetas  
+Jan 100     200       150
+Fev 75      260       100 
+Mar 150     200       250
+Abr 50      210       240
+
+Calcule as seguintes operações:
+a- A quantidade de peças vendidas
+b- A quantidade de meias vendidas
+c- A quantidade de peças vendidas mês a mês
+d- A quantidade de camisas + a quantidade de camisetas vendidas mês a mês
+e- O tipo de peça mais vendido em cada mês
+
+Aula10-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+POO
+Programação Orientada a Objetos
+
+Propriedades ou características
+	variáveis, também chamadas de instância, são as variáveis que definem propriedades dos objetos
+Ações
+	métodos(equivalente à função)
+
+Em Java;
+
+Classe  ---->  Objeto
+Classe é uma definição, modelo, molde, conjunto de especificações
+
+ex.:
+class pessoa{
+	nome;
+	telefone;
+	ligar();
+}
+
+Objeto
+
+new pessoa;
+armazenar na memória, criar o objeto
+
+Aula11-------------------------------------------------------------------------------------------------------------------------------------------------------
+Quando eu declaro uma variável dentro da clase, mas fora de qualquer método, eu chamo essa variável de variável de instância.
+Essa variáveis são visíveis por todos os métodos da classe.
+As variáveis dentro dos métodos são chamadas de variáveis locais.
+
+A classe definida se transoforma num tipo de dado. (int, String, 'Classe')
+
+como declarar o método dentro da classe?
+
+visibilidade modificador tipo nome (Parâmetros){
+	corpo
+}
+
+visibilidade = o padrão é visibilidade de pacote, ou seja é visível dentro do mesmo pacote, (private, protected and public)
+modificador = opcional. exemplo: Static
+tipo = obrigatório. Se não for retornar nada, se chama 'void'.
+nome = obrigatório. Existem regras para nomear
+(Parâmetros) = Sempre entre (). Posso deixar vazia.
+corpo = A lógica que será executada. (Dentro do corpo se eu uso o this. eu estou me referindo a uma variável de instância.
+
+Sombreamento de variáveis é quando a variável local tem mesmo nome da variável de instância. Para isso é necessário o uso do this.
+
+Declaração de Variáveis
+
+Toda variável deve começar por uma letra, um _ ou um $.
+A partir do segundo caracter pode conter letras, números, ou caracteres de conexão (_, $);
+Nãos são permitidos caracteres especiais(@, #, %,.,etc);
+Deve se evitar caracteres com acentuação;
+Não tem limite de tamanho;
+Não podem ser usados nomes de palavras reservadas.
+
+Convenções para a declaração de variáveis e métodos:
+
+Devem ser escritas com letras minúsculas;
+Caso sejam formadas por palavras compostas, devem seguir o padrão CamelCase, onde a primeira deve ser minúscula e as demais maiúsculas.
+
+Ex.:
+livro;
+pessoaFisica;
+comprovantePagamentoPessoaFisica;
+
+//Toda classe dever inicar com letra maiúscula
+
+Exercícios
+01) Crie uma classe Produto que possua os atributos nome e preco.
+A classe também deve possuir métodos de configuração e acesso para cada um dos atributos definidos.
+02) Crie uma classe Veículo, que possua os atributos marca, modelo, cor e ano de fabricação e ano modelo.
+A classe também deve possuir métodos de configuração e acesso para cada um dos atributos definidos.
+03) Crie uma classe Aluno que deve possuir os atributos nome, telefone, matrícula.
+A classe também deve possuir métodos de configuração e acesso para cada um dos atributos definidos.
+
+Emcapsulamento
+Restringir a instância, colocar 'private' nela, para que ela só possa ser acessada dentro da classe, ou com métodos dela.
+Por isso a necessidade de inserir método de configuração e de acesso às instâncias.
+
+Padrão JavaBean (get/set)
+
+método de configuração
+instância privada
+método público set + parametros idêndicos à instância
+
+
+método de retorno
+instância privada
+método público get sem parametros
+para boolean geralmente se utiliza o is ao invés de get, o eclipse tem atalho para isso
+
+Aula12----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Aula13----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+01) Crie um programa de cadastro de contatos conforme as definições abaixo.
+O contato deve possuir os seguintes atributos:
+
+id:Integer
+nome:String
+telefone:String
+email:String
+
+O programa deve apresentar opções para Cadastrar um novo contato, listar os contatos cadastrados, realizar a pesquisa de um contato através do nome, 
+realizar a pesquisa de um contato através do número de telefone.
+
+Todo contato deve obrigatoriamente possuir um nome com ao menos 3 caracteres, não deve ser permitida a inclusão de contatos com nome em branco.
+
+O sistema deve ter como base estrutural o sistema de produto realizado na aula12.
+
+
+
+
+//Modelo MDV??
+//Criar um sistema bem mais simples que apenas interaja entre as camadas sem olhar para nenhum modelo
+for it????
+Modificar o filtrar por nome para pegar todos que iniciam iguais e para isso criar um metodo novo no controller. Existe uma função startswith()
+
+Aula14-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Crie uma aplicação para cadastro de Veículos, cada veículo deve possuir as seguintes propriedades:
+id: Integer
+marca: Sting
+modelo: String
+placa: String
+anoFabricacao: int
+AnoModelo: int
+cor: String
+
+O sistema deve permitir o cadastro de um novo veículo,
+a listagem de todos os veículos,
+a pesquisa de veículo por marca,
+a pesquisa por modelo,
+a pesquisa por placa,
+a pesquisa por ano de fabricação.
+remover veículos.
+
+marca e modelo são propriedades obrigatórias e devem possuir menos de 3 caracteres não vazios (espaços).
+placa é uma propriedade obrigatória, e deve poossuir obrigatoreamente 7 caracteres.
+ano de fabricação deve ser maior ou igual a 2000.
+ano modelo não deve ser menor que o ano de fabricação.
+
+Aula15-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Prova - MVC
+
+Aula16-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Em relação à orientação a objetos, ainda não aprendemos:
+
+Herança;
+Construtores;
+Interface;
+Abstract Class;
+Static;
+Final
+Polimosrfismo.
+
+Esses serão os objetivos dessa semana.
+
+Herança:
+
+funcionário / Vendedor / Diretor - Exemplo no Eclipse
+
+extends
+
+Override = método no filho substitui o método do pai (regras: mesmos parâmetros, mesmo visibilidades, tipos equivalentes)
+
+sobrecarga = dois métodos com mesmo nome (regra: listagem de parâmetros devem ser diferente)
+
+construtores =
+se não for definido um construtor, o java irá criar um construtos para você
+Construtor sem parâmetros com a mesma visibilidade da classe
+
+tem o mesmo nome da classe e não tem tipo de retorno
+pode ser zero ou mais parâmetros e pode ter a visibilidade pública, protegida, pacote(default) ou privada
+
+01) Crie uma classe Pessoa com os atributos, codigo e nome, em seguida altere a classe Contato do projeto aula 013 para que use a classe Pessoa como super classe.
+02) Crie um construtor com todos os parâmetros necessários para a criação de um contato e ajuste o código para utilizar o novo construtor.
+
+Rever polimorfismo, teve na aula
+
+Pesquisar
+
+Interface;
+Abstract Class;
+Static;
+Final (operador)
+
+Aula17----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Classe abstrata
+Interface
+Método sort - comparable - comparableto
+estudar construtor
+
+Aula18----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+static
+final
+teste unitário x teste de integração
+
+Maven - pesquisar e instalar
+
+TDD
+
+
+Exercicio
+01) Crei um conversor entre graus celsius e farenheit, o conversor deve ter opção de realizar a conversão entre quaisquer um dos dois tipos de escala.
+O desenvolvimento deve ser realizado utilizando os conceitos de TDD.
+
+02) Crie uma calculadora de Descontos seguindo as seguintes regras:
+valores negativos devem retornar zero;
+valores positivos até 1800 devem retornar exatament o valor informado.
+valores entre 1800,01 e 2400 devem retornar o valor informado aplicando um desconto de 5%.
+Valores entre 2400,01 e 3599,99 devem retronar o valor informado aplcando um desconto de 22%;
+Valore à partir de 3600 devem retornar o valor informado aplicando desconto de 32%.
+
+Aula19-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Atibuto static é o mesmo para toda a classe, independente de instância. Posso acessar através da instância,
+posso setar através de instância, mas será o mesmo para toda a classe.
+
+Métodos estáticos só acessam variáveis estáticas, não conseguem acessar variáveis de instância.
+Métodos estáticos são usados quando não alteram nenhuma variável de instância.
+
+////NumberFormat\\\\
+
+Como usar a classe?
+
+Precisa importar:
+
+import java.text.NumberFormat;
+
+exemplo
+
+Pra que serve?
+
+A classe  NumberFormat, faz parte do pacote java.text e permite formatar números conforme a localização geográfica em que você se encontra,
+realizando a distinção entre o sinal de ponto,milhar e de  decimal, 
+também identifica a posição do sinal do número e identifica o prefixo que indica a moeda em caso de valores monetários.
+
+Principais métodos:
+
+getNumberInstance()
+
+Retorna a instância de um objeto com base no formato da localidade padrão. É utilizado para numeros
+
+ 
+
+getCurrencyInstance()
+
+Usado para formatar moedas
+
+ 
+
+getIntegerInstance()
+
+Usado para formatar números ignorando casas decimais
+
+ 
+
+getPercentInstance()
+
+Usado para formatar frações pro exemplo 0,15 é formatado e mostrado como 15%
+
+Calendar
+DateFormat
+NUmberFormat
+
+Format sempre vai formatar um objeto para texto.
+
+Preparar uma "apresentação" com cada uma dessas classes. Baseado na documentação, mas não só.
+
+Date e Locale também precisará ser estudado.
+
+Aula20-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2º era Date
+31444
+
+Final
+Collections (List, Map, Set)
+Lambda
+Stream
+JDBC
+JPA/Hibernate
+JSF
+Jax-RS
+Manipulação Arquivos (Texto e Binário)
+Banco de Dados
+Padrões Projeto
+Solid
+Arquitetura Transpo
+<<<<<<< HEAD
+New Datetime API
+=======
+New Datetime API
+
+Aula21-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Exceptions
+
+Try/catch
+
+Throwable é a mãe de todas as exceções!! =O
+Tem duas filhas, a classe Error, e a classe Exception
+Exception tem uma filha especial chamada RunTimeException
+
+Exception devo tratar, o próprio java(através do eclipse) vai me pedir um tratamento, são as exception checadas.
+Como eu trato? Ou eu utilizo Try/Catch, ou declaro com o throw exception.
+
+Os RunTimeException são as exceções não checadas, só podem acontecer em tempo de execução.
+
+Errors não tem como tratar, ou como recuperar
+
+Exercicios 
+
+java.lang.IllegalArgumentException
+extends RuntimeException
+Thrown to indicate that a method has been passed an illegal or inappropriate argument.
+-- Indica que o método passou um argumento ilegal ou inapropriado.
+https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html
+
+java.lang.IllegalStateException
+extends RuntimeException
+Signals that a method has been invoked at an illegal or inappropriate time. In other words,
+the Java environment or Java application is not in an appropriate state for the requested operation.
+-- Sinaliza que o método foi invocado em um momento ilegal ou inapropriado, em outras palavras,
+o ambiente Java ou aplicação Java não está no estado apropriado para a operação requisitada.
+https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html
+
+java.lang.ArrayIndexOutOfBoundsException
+extends IndexOutOfBoundsException
+Thrown to indicate that an array has been accessed with an illegal index. The index is either negative or greater than or equal to the size of the array.
+-- Indica que um array foi acessada através de um index ilegal. O index é negativo, maior ou igual que o tamanho da array.
+https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html
+
+java.lang.NullPointerException
+extends RuntimeException
+Thrown when an application attempts to use null in a case where an object is required. These include:
+Calling the instance method of a null object.
+Accessing or modifying the field of a null object.
+Taking the length of null as if it were an array.
+Accessing or modifying the slots of null as if it were an array.
+Throwing null as if it were a Throwable value.
+Applications should throw instances of this class to indicate other illegal uses of the null object.
+NullPointerException objects may be constructed by the virtual machine as if suppression were disabled and/or the stack trace was not writable.
+-- Lançado quando a aplicação tenta null em caso que o objeto é necessário. isso inclui:
+Chmar um método instanciado de um objeto nulo.
+Acessar ou modificar o campo de um objeto nulo.
+Pegar a length de nulo como se fosse uma array.
+Acessar ou modificar slots de nulo como se fosse uma array.
+Lançar nulo como se fosse um valor lançável.
+Aplicações deveriam lançar instâncias dessa classe para indicar outros usos ilegais do objeto nulo.
+Objetos NullPointerException podem ser contruídos pela virtual machine como se a supressão fosse desabilitada e/ou a stack não fosse possível de escrever.
+https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html
+
+java.sql.SQLException
+extends Exception
+implements Iterable<Throwable>
+An exception that provides information on a database access error or other errors.
+Each SQLException provides several kinds of information:
+a string describing the error. This is used as the Java Exception message, available via the method getMesasge.
+a "SQLstate" string, which follows either the XOPEN SQLstate conventions or the SQL:2003 conventions. The values of the SQLState string are described in the appropriate spec.
+The DatabaseMetaData method getSQLStateType can be used to discover whether the driver returns the XOPEN type or the SQL:2003 type.
+an integer error code that is specific to each vendor. Normally this will be the actual error code returned by the underlying database.
+a chain to a next Exception. This can be used to provide additional error information.
+the causal relationship, if any for this SQLException.
+-- Uma exceção que fornece informação em um erro de acesso à database ou outros erros.
+Cada SQLException fornece vários tipos de informação:
+- Uma string que descreve o erro. Isso é utilizado como uma mensagem Java Exception, disponível através do método getMessage.
+- Um texto "SQLstate", que segue o XOPEN SQLstate conventions, ou o SQL:2003 conventions. Os valores de texto da SQLState serão descritas na spec apropriada.
+- um código de erro do tipo Integer que específica cada fornecedor. Geralmente esse será o erro em si retornado pela database.
+- uma corrente para a próxima exceção. Isso pode ser utilizado para fornecer informação adicional do erro
+- a relação casual,se houver para essa SQLException.
+
+https://docs.oracle.com/javase/8/docs/api/java/sql/SQLException.html
+
+java.io.IOException
+extends Exception
+Signals that an I/O exception of some sort has occurred. This class is the general class of exceptions produced by failed or interrupted I/O operations.
+-- Sinaliza que uma exceção de input/output de alguma forma ocorreu. Essa classe é uma classe genérica de exceções produzidas por falhas ou interrupções de operações de input/output.
+https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html
+
+java.io.FileNotFoundException
+extends IOException
+Signals that an attempt to open the file denoted by a specified pathname has failed.
+This exception will be thrown by the FileInputStream, FileOutputStream, and RandomAccessFile constructors when a file with the specified pathname does not exist.
+It will also be thrown by these constructors if the file does exist but for some reason is inaccessible,
+for example when an attempt is made to open a read-only file for writing.
+-- Sinaliza que a tentaiva de abrir um arquivo de um endereço específico falhou.
+Essa exceção será lançada pelo FileInputStream, FileOutputStream, e RandomAccessFile contructors quando um arquivo com um endereço especificado não existir.
+Essa exceção também será lançada por estes constructors quando o arquivo existir, mas por alguma razão for inacessível, por exemplo quando se tentar editar um arquivo de apenas leitura.
+https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html
+
+O que é uma classe anônima?
+Como identificar uma classe anônima?
+
+Interface funcional só funciona se tiver apenas um método abstrato, e isso permite uso de lambda.
+
+Aula22-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Collection (List [ArrayList,Vector, LinkedList], Set [HashSet, TreeSet]) / (Map[HashMap, TreeMap, HashTable])
+Aprendemos essas coisas aí de cima
+Usar Iterator para remoção, dar uma olhada nisso
+
+Interface List
+Ordenável
+Índice
+Valores Duplicados
+
+Interface Set
+Não duplicados(Únicos)
+Não tem índice
+Não tem ordenação
+
+Interface Map
+Não tem ordenação
+Chave e Valor
+Pode ter valores duplicados
+
+Preciso implementar equals() e/ou hashcode() para funcionarem adequadamente e o comparable() para alguns.
+>>>>>>> 370700ec53964511ff2c852ff82948b44fe15c57
+
+Aula23--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Uso de enumaração - Enum
+
+Estudar HashCode e Equals!!
+
+MapReduce
+
+Revisar
+
+mapToDouble
+OptinalDouble
+getAsDouble
+filter
+map
+
+Aula24-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+01) Crie um Enum TipoContato com os seguintes valores:
+FAMILIA
+AMIGO,
+TRABALHO,
+OUTROS.
+
+02) Crie uma classe COntato com os atributos abaixo:
+
+ID: Integer
+nome: string
+email: string
+telefone: String
+tipo: TipoContato
+//implementar equals e hashcode
+
+03) Crie uma interface denominada RepositorioContato com os seguintes métodos:
+
+boolean adicionar(Contato contato);
+boolean editar(Contato contato);
+java.util.List,Contato> buscarTodos();
+java.util.List<Contato> buscarPorNome (String nome);
+java.util.List<Contato> buscarPorTelefone (String telefone);
+java.util.List<Contato> buscarPorTipo (TipoContato tipo);
+Contato buscarPorId(Integer id);
+boolean remover(Contato contato);
+
+04) Crie uma classe denominada RepositorioContatoMemory que implemente a interface RepositorioContato.
+Esta classe deve armazenar os dados dos contatos em uma Lista em memória.
+
+05) Crie uma classe de Testes que realize os testes unitários para todos os métodos da classe RepositorioContatoMemory.
+
+Aula25---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Instalar em casa o PostgreSQL 9.4 ou superior
+
+*no pgAdmin 4, na database entrar em tools, query tools:
+
+comando para criar database:
+
+create database "nome da base de dados"; // cria-se sem asterísticos
+
+comando para criar tabela:
+
+create table nome_tabela(
+    nome_da_coluna tipo_de_dado restrições,
+    nome_da_coluna tipo_de_dado restrições,
+    nome_da_coluna tipo_de_dado restrições
+);
+
+opções regulares para tipo_de_dado são: Integer, varchar(100)
+
+opções regulares para restrições são: not null
+
+comando para excluir tabelas:
+
+drop table "nome da base de dados"; // cria-se sem asterísticos
+
+para inserir uma nova coluna:
+
+alter table "nome da base de dados" add column "nome da coluna" integer; // cria-se sem asterísticos
+
+para nenomear uma tabela (no postgreSQL):
+
+alter table "nome da tabela" rename column "nome da coluna antiga" to "nome da coluna nova"; // cria-se sem asterísticos
+
+para alterar tipo da coluna:
+
+alter table "nome tabela" alter column "nome da coluna" type varchar(3); // cria-se sem asterísticos
+
+para apagar uma coluna:
+
+alter table "nome tabela" drop column "nome da coluna"; // cria-se sem asterísticos
+
+para inserir valores na tabela:
+
+insert into funcionarios(id, nome, idade, setor)
+values
+(1, 'João', '45', 3),
+(2,'Maria','55',9);
+
+para acessar toda a tabela:
+
+select * from funcionarios;
+
+para acessar informações de colunas específicas:
+
+select
+nome,
+idade
+from funcionarios;
+
+
+para acessar informações de colunas específicas e com determinadas acaracterísticas:
+
+select
+nome,
+idade
+from funcionarios
+where id = 2;
+
+select
+nome,
+idade
+from funcionarios
+where id >= 1;
+
+select
+nome,
+idade
+from funcionarios
+where id <> 1;
+
+para alterar alguma informação:
+
+update funcionarios
+set idade = 60
+where id = 4; //sem o where ele vai alterar tudo!!
+
+para remover informações:
+
+delete from produtos where id = 4;
+
+para organizar as informações solicitadas no select:
+
+select * from produtos
+order by id asc;
+
+ou
+
+select * from produtos
+order by id desc;
+
+Aula26---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Continuamos com o pgAdmin 4...
+
+tipos numericos mais usados:
+decimal
+serial // autoincrementável geralmente utilizado para id / key / chave primária
+
+https://www.postgresql.org/docs/9.1/static/datatype-numeric.html
+
+tipos texto mais usados:
+varchar()
+
+data
+timestamp - both date and time (no time zone)
+date - somente a data
+time - somente a hora
+time whith time zone - hora e fuso
+now
+CURRENT_DATE, CURRENT_TIME, CURRENT_TIMESTAMP, LOCALTIME, LOCALTIMESTAMP
+
+boolean
+enum // pode ser usada para garantir que um enum no java seja respeitado no banco (anti-estagiario)
+
+Chave primária
+natural, já existe, utilizar cpf, por exemplo
+artificial, criado pelo banco de dados
+
+para fazer contagem:
+select count(*)
+from produtos
+
+para fazer contagem de produtos específicos:
+select count(*) as "Total"
+from produtos
+
+select max(preco)
+from produtos
+where preco > 20;
+
+select * from produtos
+where preco = (select max(preco) from produtos);
+
+select * from produtos
+where preco > (select avg(preco) from produtos);
+
+soma:
+select sum(preco) from produtos;
+
+potenciação:
+select power(preco, 2) from produtos
+
+raiz quadrada:
+select sqrt(16)
+
+
+--select power(16, 0.333)
+select power(2.51751434, 3)
+
+--select power(16, 0.25);
+select power(2, 4)
+
+buscar valores começando com:
+select * from contatos
+where nome like 'João%'
+
+maíscula:
+select upper(nome) from contatos
+
+minusculas:
+select lower(nome) from contatos
+
+pegar a substring:
+select substr(nome, 1,2) from contatos
+
+quantidade de caracteres:
+select length(nome) from contatos
+
+trim retira os espaços:
+select length(trim('    jhsdfjgsdjhgfsd'))
+
+retirar todos os espaços:
+select replace('bla bla ',' ','')
+
+
+
+create database CasasBahia
+
+create table produtos(
+id serial not null primary key,
+nome varchar(1000) not null,
+preco int not null
+)
+
+insert into produtos(nome,preco)
+values
+('Televisao LED 42',1400.40),
+('Televisao LED 32',1250.30),
+('Aparelho de Jantar Tramontina',800.00),
+('Playstation 4',2400.40),
+('Playstation 3',720.99),
+('Sofa',2400.60),
+('Fritadeira elétrica',200),
+('Forno Microondas 201',630.90),
+('Banheira Hidromassagem G',19999.90),
+('Roupeiro 6 portas',1110.10),
+('Notebook Del vostro',2200.40),
+('IPhone 6S',3500.23)
+
+21
+select * from produtos
+where preco > 1000 and preco < 2000
+1,'Televisao LED 42','1400.40'
+2,'Televisao LED 32','1250.30'
+10,'Roupeiro 6 portas','1110.10'
+
+22
+select * from produtos
+where nome like '%Televisao%'
+1,'Televisao LED 42','1400.40'
+2,'Televisao LED 32','1250.30'
+
+23
+select * from produtos
+where nome like '%Playstation%'
+4,'Playstation 4','2400.40'
+5,'Playstation 3','720.99'
+
+24
+select avg(preco) from produtos
+'3051.1850000000000000'
+
+25
+select max(preco) from produtos
+'19999.90'
+
+26
+select min(preco) from produtos
+'200.00'
+
+27
+select sum(preco) from produtos
+'36614.22'
+
+28
+select upper(nome) from produtos
+'TELEVISAO LED 42'
+'TELEVISAO LED 32'
+'APARELHO DE JANTAR TRAMONTINA'
+'PLAYSTATION 4'
+'PLAYSTATION 3'
+'SOFA'
+'FRITADEIRA ELÉTRICA'
+'FORNO MICROONDAS 201'
+'BANHEIRA HIDROMASSAGEM G'
+'ROUPEIRO 6 PORTAS'
+'NOTEBOOK DEL VOSTRO'
+'IPHONE 6S'
+
+29
+select lower(nome) from produtos
+'televisao led 42'
+'televisao led 32'
+'aparelho de jantar tramontina'
+'playstation 4'
+'playstation 3'
+'sofa'
+'fritadeira elétrica'
+'forno microondas 201'
+'banheira hidromassagem g'
+'roupeiro 6 portas'
+'notebook del vostro'
+'iphone 6s'
+
+30
+select current_date
+'2018-10-17'
+
+31
+select length(nome) from produtos
+16
+16
+29
+13
+13
+4
+19
+20
+24
+17
+19
+9
+
+32
+select substr(nome,1,7) from produtos
+'Televis'
+'Televis'
+'Aparelh'
+'Playsta'
+'Playsta'
+'Sofa'
+'Fritade'
+'Forno M'
+'Banheir'
+'Roupeir'
+'Noteboo'
+'IPhone '
+
+33
+select substr(nome,3,5) from produtos
+'levis'
+'levis'
+'arelh'
+'aysta'
+'aysta'
+'fa'
+'itade'
+'rno M'
+'nheir'
+'upeir'
+'teboo'
+'hone '
+
+34
+select count(*) from produtos
+'12'
+
+35
+select count(*) from produtos
+where preco>1000
+'8'
+
+36
+select count(*) from produtos
+where preco<1000
+'4'
+
+37
+select sum(preco) from produtos
+where preco>1000
+'34262.33'
+
+38
+select sum(preco) from produtos
+where preco<1000
+'2351.89'
+
+39
+select avg(preco) from produtos
+where preco<1200
+'692.3980000000000000'
+
+40
+select avg(preco) from produtos
+where preco>1000
+'4282.7912500000000000'
+
+41
+select avg(preco) from produtos
+where preco>10000 and preco<20000
+'19999.9000000000000000'
+
+42
+select * from produtos
+where preco = (select max(preco) from produtos)
+9,'Banheira Hidromassagem G','19999.90'
+
+Atividade 2:
+create table "Contatos"(
+codigo serial not null primary key,
+    nome varchar(100) not null,
+    email varchar(120)
+)
+
+insert into "Contatos"(nome, email)
+values
+('Maria','maria@teste.com'),
+('Marcelo','marcelo@teste.com'),
+('Adriana','adriana@teste.com'),
+('Fernando','fernando@teste.com'),
+('Gregório','greg@teste.com'),
+('Anderson','anderson@teste.com'),
+('Fabiana','fabiana@teste.com'),
+('Deise','deise@teste.com'),
+('Damaris','damaris@teste.com'),
+('Daniel','daniel@teste.com'),
+('Claudia','claudia@teste.com'),
+('Claudenice','claudenice@teste.com'),
+('Claudilene','claudilene@teste.com'),
+('Rafael','rafael@teste.com'),
+('Rafaela','rafaela@teste.com')
+
+66
+select * from "Contatos"
+1,'Maria','maria@teste.com'
+2,'Marcelo','marcelo@teste.com'
+3,'Adriana','adriana@teste.com'
+4,'Fernando','fernando@teste.com'
+5,'Gregório','greg@teste.com'
+6,'Anderson','anderson@teste.com'
+7,'Fabiana','fabiana@teste.com'
+8,'Deise','deise@teste.com'
+9,'Damaris','damaris@teste.com'
+10,'Daniel','daniel@teste.com'
+11,'Claudia','claudia@teste.com'
+12,'Claudenice','claudenice@teste.com'
+13,'Claudilene','claudilene@teste.com'
+14,'Rafael','rafael@teste.com'
+15,'Rafaela','rafaela@teste.com'
+
+67
+select nome from "Contatos"
+'Maria'
+'Marcelo'
+'Adriana'
+'Fernando'
+'Gregório'
+'Anderson'
+'Fabiana'
+'Deise'
+'Damaris'
+'Daniel'
+'Claudia'
+'Claudenice'
+'Claudilene'
+'Rafael'
+'Rafaela'
+
+68
+select email from "Contatos"
+'maria@teste.com'
+'marcelo@teste.com'
+'adriana@teste.com'
+'fernando@teste.com'
+'greg@teste.com'
+'anderson@teste.com'
+'fabiana@teste.com'
+'deise@teste.com'
+'damaris@teste.com'
+'daniel@teste.com'
+'claudia@teste.com'
+'claudenice@teste.com'
+'claudilene@teste.com'
+'rafael@teste.com'
+'rafaela@teste.com'
+
+69
+select * from "Contatos"
+where nome like 'A%'
+3,'Adriana','adriana@teste.com'
+6,'Anderson','anderson@teste.com'
+
+70
+select * from "Contatos"
+where nome like 'C%'
+11,'Claudia','claudia@teste.com'
+12,'Claudenice','claudenice@teste.com'
+13,'Claudilene','claudilene@teste.com'
+
+71
+select * from "Contatos"
+where nome like 'cl%'
+
+72
+select * from "Contatos"
+where codigo > 10
+11,'Claudia','claudia@teste.com'
+12,'Claudenice','claudenice@teste.com'
+13,'Claudilene','claudilene@teste.com'
+14,'Rafael','rafael@teste.com'
+15,'Rafaela','rafaela@teste.com'
+
+73
+select * from "Contatos"
+where email like '%@teste.com'
+1,'Maria','maria@teste.com'
+2,'Marcelo','marcelo@teste.com'
+3,'Adriana','adriana@teste.com'
+4,'Fernando','fernando@teste.com'
+5,'Gregório','greg@teste.com'
+6,'Anderson','anderson@teste.com'
+8,'Deise','deise@teste.com'
+9,'Damaris','damaris@teste.com'
+
+74
+select * from "Contatos"
+where email like '%@hotmail.com'
+29,'Rafael','rafael@hotmail.com'
+
+75
+select * from "Contatos"
+where email like '%@gmail%'
+22,'Fabiana','fabiana@gmail.com'
+25,'Daniel','daniel@gmail.com'
+27,'Claudenice','claudenice@gmail.com'
+28,'Claudilene','claudilene@gmail.com'
+
+76
+select * from "Contatos"
+where email like '%@terra%'
+30,'Rafaela','rafaela@terra.com'
+
+77
+select * from "Contatos"
+where email like '%@teste.com' and codigo > 7
+8,'Deise','deise@teste.com'
+9,'Damaris','damaris@teste.com'
+
+78
+delete from "Contatos"
+where email = 'claudenice@gmail.com'
+DELETE 1
+
+Query returned successfully in 95 msec.
+
+79
+delete from "Contatos"
+where codigo > 10
+DELETE 4
+
+Query returned successfully in 77 msec.
+
+80
+delete from "Contatos"
+DELETE 10
+
+Query returned successfully in 80 msec.
+
+Atividade 03
+
+create table veiculos(
+id serial not null primary key,
+    marca varchar(50) not null,
+    modelo varchar(50) not null,
+    ano int not null
+)
+
+insert into veiculos(marca, modelo, ano)
+values
+('Ford', 'Ka', 2007),
+('Ford', 'Fusion', 2018),
+('Chevrolet', 'Corsa', 2003),
+('Chevrolet', 'Onix', 2017),
+('Fiat', 'Chronos', 2018),
+('Fiat', 'Tempra', 1996),
+('Fiat', 'Palio', 2015),
+('Fiat', 'Uno', 2018)
+
+Usando o group by:
+select marca, count(marca)
+from veiculos
+group by marca
+
+'Fiat','4'
+'Chevrolet','2'
+'Ford','2'
+
+//////////////////////////////////////////////////////////////////////////////////
+Funções de agregação não funcionam a clausula where
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+having
+Existem outra clausula para isso:
+select marca, avg(ano)
+from veiculos
+group by marca
+having avg(ano)>2012
+
+Aula27---------------------------------------------------------------------------------------------------------------------------
+
+Back to pgAdmin 4
+
+select to_char(now(),'DD/MM/YYYY'), now()
+
+Apaga a tabela
+truncate table "nome"
+
+exemplo
+
+create table pagamentos(
+	id serial not null primary key,
+    valor decimal(10,2) not null,
+    "dataPrevisao" timestamp without time zone not null,
+    "dataPagamento" timestamp without time zone,
+    descricao varchar(500) not null
+);
+
+
+insert into pagamentos(valor, "dataPrevisao", "dataPagamento", descricao)
+values
+(29.90, to_timestamp('05/09/2018 10:20','DD/MM/YYYY HH24:MI'), null, 'Prestação 01'),
+(200.00, 
+ to_timestamp('07/10/2018 10:20','DD/MM/YYYY HH24:MI'), 
+ to_timestamp('07/10/2018 10:20','DD/MM/YYYY HH24:MI'), 
+ 'CELESC'),
+(990.00, 
+ to_timestamp('13/08/2018 23:59','DD/MM/YYYY HH24:MI'), 
+ to_timestamp('10/08/2018 13:30','DD/MM/YYYY HH24:MI'), 
+ 'Seguro automóvel'),
+(29.90, to_timestamp('05/10/2018 23:59','DD/MM/YYYY HH24:MI'), null, 'Prestação 02'),
+(290.90, to_timestamp('15/10/2018 23:59','DD/MM/YYYY HH24:MI'), null, 'Prestação 01'),
+(29.90, to_timestamp('05/10/2018 23:59','DD/MM/YYYY HH24:MI'), null, 'Cartão 01'),
+(59.90, to_timestamp('05/09/2018 23:59','DD/MM/YYYY HH24:MI'), null, 'Telefone'),
+(129.27, to_timestamp('18/11/2018 23:59','DD/MM/YYYY HH24:MI'), null, 'Luz'),
+(499.89, to_timestamp('20/10/2018 23:59','DD/MM/YYYY HH24:MI'), null, 'Curso Nodejs'),
+(29.90, to_timestamp('05/12/2018 23:59','DD/MM/YYYY HH24:MI'), null, 'Prestação 03')
+
+select * from pagamentos
+where "dataPrevisao" > "dataPagamento";
+
+select * from pagamentos
+where "dataPagamento" is null or "dataPagamento" >= "dataPrevisao";
+
+select id, to_char("dataPrevisao", 'DD') "Dia", to_char("dataPrevisao", 'MM') "Mês"
+from pagamentos
+where "dataPrevisao" < now() and "dataPagamento" is null14:21 19/10/2018
+
+Foreign key (normalmente é a primary key da outra tabela, mas não é obrigada)
+
+Exemploe de foreign
+
+create table pais(
+	id serial not null,
+    nome varchar(100) not null,
+    primary key(id)
+);
+
+create table filhos(
+	id serial not null,
+    nome varchar(100) not null,
+    "paiId" bigint ,
+    primary key(id),
+    foreign key("paiId") references pais(id)
+);
+
+insert into pais(nome)
+values
+('João'),
+('Maria'),
+('Adão'),
+('Eva'),
+('Joana'),
+('Bernardo'),
+('Luiz');
+
+insert into filhos(nome, "paiId")
+values
+('João Jr', 1),
+('Marcos',2),
+('Beatrix',2),
+('José',3),
+('Joana',4),
+('Ferdnando',7),
+('Tibursio',7),
+('Madalena',null),
+('Zigfredo',null);
+
+//////////////////////////////
+Join
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Inner Join
+Intersecção entre as tabelas:
+
+select 
+fl.id,
+fl.nome,
+pa.nome as pai
+from filhos as fl
+inner join pais as pa on pa.id = fl."paiId"
+
+Left Join (primeira é a esquerada):
+select 
+fl.id,
+fl.nome,
+pa.nome as "responsável"
+from filhos as fl
+
+Left Join (segundo é a direita):
+select 
+fl.id,
+fl.nome,
+pa.nome as "responsável"
+from filhos as fl
+right join pais as pa on pa.id = fl."paiId"
+left join pais as pa on pa.id = fl."paiId"
+
+Outro exemplo, nesse caso utilizamos uma tabela de ligação, para ter uma relação maior do que 1x1
+
+create table funcionarios(
+	id serial not null,
+    nome varchar(100) not null,
+    primary key(id)
+);
+
+create table dependentes(
+	id serial not null,
+    nome varchar(100) not null,
+    primary key(id)
+);
+
+create table "funcionarios_dependenetes"(
+	"funcId" bigInt not null,
+    "depenId" bigInt not null,
+    foreign key("funcId") references funcionarios(id),
+    foreign key("depenId") references dependentes(id)
+);
+
+insert into funcionarios(nome)
+values
+('Adão'),
+('Eva'),
+('João'),
+('Ana'),
+('Fernando'),
+('Mariana');
+
+
+insert into funcionarios(nome)
+values
+('Maria');
+
+insert into dependentes(nome)
+values
+('Adão Jr'),
+('Amanda'),
+('Joana'),
+('Clarisse'),
+('Carmen'),
+('Diego'),
+('Mara');
+
+insert into "funcionarios_dependenetes"("funcId","depenId")
+values
+(1,1),
+(2,1),
+(3,2),
+(4,2),
+(5,3),
+(5,4),
+(5,5);
+
+Double join para poder relacionar tudo:
+select 
+	func.nome as funcionario,
+    dep.nome as dependente
+from dependentes as dep
+inner join "funcionarios_dependenetes" as fd on fd."depenId" = dep.id
+inner join funcionarios as func on func.id = fd."funcId"
+
+uso de group by:
+select 
+	dep.nome as funcionario,
+    count(func.nome)
+from dependentes as dep
+inner join "funcionarios_dependenetes" as fd on fd."depenId" = dep.id
+inner join funcionarios as func on func.id = fd."funcId"
+group by dep.nome
+
+
+para reiniciar uma tabela
+truncate table "nome" restart identity cascade
+
+Atividade:
+
+
+create table autor(
+	id serial not null primary key,
+    nome varchar(50) not null,
+    sobrenome varchar(100) not null,
+    data_nascimento date not null
+);
+
+create table categorias(
+	id serial not null primary key,
+    nome varchar(50) not null
+);
+
+create table tags(
+	id serial not null primary key,
+    nome varchar(50) not null
+);
+
+create table livros(
+	id serial not null primary key,
+    titulo varchar(200) not null,
+    data_publicacao date not null,
+    edicao int not null,
+    sequencial int not null,
+    "categoriaId" bigInt,
+    foreign key("categoriaId") references categorias(id)
+);
+
+create table livros_autor(
+	"livroId" bigInt,
+    foreign key("livroId") references livros(id),
+    "autorId" bigInt,
+    foreign key("autorId") references autor(id)
+);
+
+create table livros_tags(
+	"livroId" bigInt,
+    foreign key("livroId") references livros(id),
+    "tagId" bigInt,
+    foreign key("tagId") references tags(id)
+);
+
+Cadastre 5 autores
+
+insert into autor(nome, sobrenome, data_nascimento)
+values
+('John', 'R. R. Tolkien', '1892-01-03'),
+('Joanne', 'Rowling', '1965-07-31'),
+('George', 'R. R. Martin', '1948-09-20'),
+('Stephen', 'King', '1947-09-21'),
+('Stephen', 'Hawking', '1942-01-08')
+
+cadastre 4 categorias
+
+insert into categorias(nome)
+values
+('Ficção'),
+('Fantasia'),
+('Ciências'),
+('Aventura'),
+('Suspense')
+
+cadastre 8 tags
+
+insert into tags(nome)
+values
+('Cientifica'),
+('Fantasiosa'),
+('Medieval'),
+('Exatas'),
+('Humanas'),
+('Ação'),
+('Animação'),
+('Terror'),
+('Mistério')
+
+cadastre 10 livros com ao menos 2 livros por categoria
+
+insert into livros(titulo, data_publicacao, edicao, sequencial, "categoriaId")
+values
+('A Sociedade do Anél', '1975-03-01', 2, 123, 2),
+('As duas Torres', '1980-05-03', 1, 234, 2),
+('O Retorno do Rei', '1985-06-12', 3, 345, 2),
+('The Matrix', '1990-09-11', 1, 456, 1),
+('A Teoria das Cordas', '1995-02-07', 4, 567, 3),
+('It, a Coisa', '1983-12-10', 6, 678, 5),
+('Pappy Hopper e o Pulo Mortal', '1992-02-02', 3, 789, 4),
+('Carrie, a Estranha', '1988-01-01', 3, 890, 5),
+('Pappy Hopper e a Cenoura Amaldiçoada', '1989-03-03', 1, 901, 4),
+('Animatrix', '1997-04-01', 2, 012, 1),
+('Os três Dragões', '2006-04-04', 9, 987, 2),
+('Biomol Molecular das Molequinhas', '2009-07-07', 5, 876, 3)
+
+cadastre 10 livros_autor com ao menos 1 autor para cada livro
+
+insert into livros_autor("livroId", "autorId")
+values
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 3),
+(5, 5),
+(6, 4),
+(7, 2),
+(8, 4),
+(9, 2),
+(10, 3),
+(11, 3),
+(12, 5)
+
+cadastre 10 livros_tags com ao menos 1 tag por livro
+
+insert into livros_tags("livroId", "tagId")
+values
+(1, 3),
+(2, 3),
+(3, 3),
+(4, 1),
+(5, 4),
+(6, 7),
+(7, 6),
+(8, 8),
+(9, 6),
+(10, 1),
+(11, 3),
+(12, 5)
+
+Práticas:
+1
+Livros e suas tags:
+
+select
+livros.titulo as titulo,
+tags.nome as subcategoria
+from livros
+inner join livros_tags as lt on lt."livroId" = livros.id
+inner join tags on lt."tagId" = tags.id
+
+Autores, seus livros e suas categorias
+
+select
+autor.nome as autor,
+autor.sobrenome as sobrenome,
+livros.titulo as titulo,
+tags.nome as subcategoria
+from autor
+inner join livros_autor on livros_autor."autorId" = autor.id
+inner join livros on livros_autor."livroId" = livros.id
+inner join livros_tags on livros_tags."livroId" = livros.id
+inner join tags on tags.id = livros_tags."tagId"
+
+Aula28----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Atividades
+01 - Selecione os livros com suas categorias;
+
+select
+livros.titulo,
+categorias.nome
+from livros
+inner join categorias on categorias.id = livros."categoriaId"
+
+Resultado:
+
+'Animatrix','Ficção'
+'The Matrix','Ficção'
+'Os três Dragões','Fantasia'
+'O Retorno do Rei','Fantasia'
+'As duas Torres','Fantasia'
+'A Sociedade do Anél','Fantasia'
+'Biomol Molecular das Molequinhas','Ciências'
+'A Teoria das Cordas','Ciências'
+'Pappy Hopper e a Cenoura Amaldiçoada','Aventura'
+'Pappy Hopper e o Pulo Mortal','Aventura'
+'Carrie, a Estranha','Suspense'
+'It, a Coisa','Suspense'
+
+02 - Selecione os livros com suas tags;
+
+select
+livros.titulo,
+tags.nome
+from livros
+inner join livros_tags on livros_tags."livroId" = livros.id
+inner join tags on livros_tags."tagId" = tags.id
+
+Resultado:
+
+'A Sociedade do Anél','Medieval'
+'As duas Torres','Medieval'
+'O Retorno do Rei','Medieval'
+'The Matrix','Cientifica'
+'A Teoria das Cordas','Exatas'
+'It, a Coisa','Animação'
+'Pappy Hopper e o Pulo Mortal','Ação'
+'Carrie, a Estranha','Terror'
+'Pappy Hopper e a Cenoura Amaldiçoada','Ação'
+'Animatrix','Cientifica'
+'Os três Dragões','Medieval'
+'Biomol Molecular das Molequinhas','Humanas'
+
+03 - Selecione os livros com seus autores;
+
+select
+livros.titulo,
+autor.nome,
+autor.sobrenome
+from livros
+inner join livros_autor on livros_autor."livroId" = livros.id
+inner join autor on autor.id = livros_autor."autorId"
+
+Resultado:
+
+'A Sociedade do Anél','John','R. R. Tolkien'
+'As duas Torres','John','R. R. Tolkien'
+'O Retorno do Rei','John','R. R. Tolkien'
+'The Matrix','George','R. R. Martin'
+'A Teoria das Cordas','Stephen','Hawking'
+'It, a Coisa','Stephen','King'
+'Pappy Hopper e o Pulo Mortal','Joanne','Rowling'
+'Carrie, a Estranha','Stephen','King'
+'Pappy Hopper e a Cenoura Amaldiçoada','Joanne','Rowling'
+'Animatrix','George','R. R. Martin'
+'Os três Dragões','George','R. R. Martin'
+'Biomol Molecular das Molequinhas','Stephen','Hawking'
+
+04 - Escolha uma tag e selecione todos os livros que possuem a categoria e essa tag. A cosulta deve trazer as informações do livro, sua categoria e seus autores;
+
+select
+autor.nome as autor,
+autor.sobrenome as sobrenome,
+livros.titulo as titulo,
+livros.id as "LivroID",
+livros.data_publicacao,
+livros.edicao,
+livros.sequencial,
+categorias.nome as categoria,
+tags.nome as subcategoria
+from autor
+inner join livros_autor on livros_autor."autorId" = autor.id
+inner join livros on livros_autor."livroId" = livros.id
+inner join livros_tags on livros_tags."livroId" = livros.id
+inner join tags on tags.id = livros_tags."tagId"
+inner join categorias on categorias.id = livros."categoriaId"
+where tags.nome = 'Medieval'
+
+Resultado:
+
+'John','R. R. Tolkien','A Sociedade do Anél',1,'1975-03-01',2,123,'Fantasia','Medieval'
+'John','R. R. Tolkien','As duas Torres',2,'1980-05-03',1,234,'Fantasia','Medieval'
+'John','R. R. Tolkien','O Retorno do Rei',3,'1985-06-12',3,345,'Fantasia','Medieval'
+'George','R. R. Martin','Os três Dragões',11,'2006-04-04',9,987,'Fantasia','Medieval'
+
+05 - Selecione a quantidade de livros agrupados por categoria;
+
+select
+categorias.nome,
+count(livros.titulo)
+from livros
+inner join categorias on categorias.id = livros."categoriaId"
+group by categorias.nome
+
+Resultado:
+
+'Fantasia','4'
+'Ficção','2'
+'Ciências','2'
+'Suspense','2'
+'Aventura','2'
+
+06 - Selecione a quantidade de livros agrupados por tag;
+
+select
+tags.nome,
+count (livros.titulo)
+from livros
+inner join livros_tags on livros_tags."livroId" = livros.id
+inner join tags on livros_tags."tagId" = tags.id
+group by tags.nome
+
+resultado:
+
+'Terror','1'
+'Cientifica','2'
+'Exatas','1'
+'Animação','1'
+'Humanas','1'
+'Medieval','4'
+'Ação','2'
+
+07 - Selecione a quantidade de livros agrupados por autor;
+select
+autor.sobrenome,
+count(livros.titulo)
+from livros
+inner join livros_autor on livros_autor."livroId" = livros.id
+inner join autor on autor.id = livros_autor."autorId"
+group by autor.id
+
+Resultado:
+
+'King','2'
+'R. R. Tolkien','3'
+'Hawking','2'
+'R. R. Martin','3'
+'Rowling','2'
+
+08 - Selecione os autores que escreveram mais de um livro.
+
+select
+autor.sobrenome,
+count(livros.titulo)
+from livros
+inner join livros_autor on livros_autor."livroId" = livros.id
+inner join autor on autor.id = livros_autor."autorId"
+group by autor.id
+having count(livros.titulo) > 1
+
+Resultado:
+
+'King','2'
+'R. R. Tolkien','3'
+'Hawking','2'
+'R. R. Martin','3'
+'Rowling','2'
+
+para limitar a busca você pode colocar o "limit" no final e quantidade limite:
+limit 2
+
+offset pula um número:
+offset 3 // serve para paginação por exemplo
+
+Aula29----------------------------------------------------------------------------------------------------------------------------------
+
+Aprendendo a se conectar ao banco de dados à paritr do Java (Eclipse)
+
+Se não for possível utilizar a conexão por falha na senha, é possível reestabeler uma senha no banco de dados, através desse comando (no pgAdmin4):
+
+ALTER USER postgres WITH ENCRYPTED PASSWORD 'admin'; --as palavras em minusculo são "flexíveis",
+devem ser as mesmas utilizadas no comando do JAVA de usuário e senha respectivamente.
+
+Comunicação entre o JAVA e o Banco de Dados é feito através de um padrão de acesso:
+DAO - Data Access Object
+é uma classe  no meu projeto, também podemos chamar de Repositório! tã, tã tã!!!!
+
+Vamos implementar agora
+
+Aula30----------------------------------------------------------------------------------------------------------------------------------
+
+Instalar Maven
+
+Exercicio
+01) Crie um sistema para cadastro de produtos.
+O sistema deve apresentar um menu com as opções abaixo e deve conter a implementação de todas as atividades necessárias para a realização das ações definidas no menu.
+
+1 - Cadastrar produto
+2 - Listar produtos
+3 - Listar produtos por faixa de preço
+4 - Listar produtos por nome
+5 - Editar produto
+6 - Remover produto
+
+Deve ser criado na base de dados curso uma tabela produtos contendo as seguintes colunas:
+produtos
+id serial not null primary key,
+nome varchar(200) not null,
+preco decimal(10,2) not null
+
+O sistema não deve permitir o cadastro de produtos com preço menor que R$0.01.
+O sistema deve implementar uma interface RepositorioProduto
+interface RepositorioProduto{
+ public List<Produto> buscarTodos();
+ public List<Produto> buscarPorNome(String nome);
+ public List<Produto> buscarPorPreco(double minimo, double maximo);
+ public Produto buscarPorId(Integer id);
+ public void inserir(Produto produto);
+ public void atualizar(Produto produto);
+ public void remover(Integer id);
+ public int contar();
+}
+
+Aula31----------------------------------------------------------------------------------------------------------------------------------------
+
+De novo copiamos o Maven, e iniciamos um novo prtojeto com postgres nas dependências
+
+na db curso:
+create table pessoas(
+	id serial not null primary key,
+    nome varchar(100) not null
+);
+
+Criamos no pom:
+
+<dependencies>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.6.Final</version>
+		</dependency>
+	</dependencies>
+
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+criamos uma pasta chamada "META-INF" dentro da pasta src/main/java
+criamos um file chamado "persistence.xml" dentro da pasta META-INF com o seguinte conteúdo:
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+  version="2.1">
+
+  <persistence-unit name="PERSISTENCE">
+    <description> Hibernate JPA Configuration Example</description>
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/curso" />
+      <property name="javax.persistence.jdbc.user" value="postgres" />
+      <property name="javax.persistence.jdbc.password" value="admin" />
+      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.hbm2ddl.auto" value="update" />
+    </properties>
+
+  </persistence-unit>
+
+</persistence>
+
+Agora criamos uma classe nova chamada "JPAUtil" dentro do package br.com.cursojava com esse conteúdo:
+
+package br.com.cursojava;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class JPAUtil {
+	
+	private static final String PERSISTENCE_UNIT_NAME = "PERSISTENCE";
+	private static EntityManagerFactory factory;
+	
+	public static EntityManagerFactory geEntityManagerFactory(){
+		if (factory == null){
+			factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+		}
+		return factory;
+	}
+	
+	public static void shutdown(){
+		if (factory != null){
+			factory.close();
+		}
+	}
+
+}
+
+EntityManagerFactory é responsável por criar e gerenciar conexões com o banco de dados definidos no persistence-unit
+
+Na classe "Pessoa" que define o tipo utilizadao na tabela utilizamos várias coisas novas:
+
+@Entity // representa uma tabela
+@Table(name="pessoas") // para reconhecer o nome da tabela, pois a classe pode estar em nome diferente da tabela
+public class Pessoa {
+	
+	@Id // indica que esta é a chave primária
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // para identificar que é gerada automaticamente, strategy é como é gerada, nesse caso é o serial
+	private Integer id;
+	
+	@Column // indica que é um coluna na tabela
+	private String nome;
+
+Isso é um mapeamento do banco de dados
+
+Aula32------------------------------------------------------------------------------------------------------------------------------
+
+Lembrar de fazer quando ligar:
+1 - Pegar conteúdo do git,
+2 - Copiar o Maven dos arquivos compartilhado do profpc,
+3 - Abrir o PGAdmin, criar a db, a tabela e alterar a senha do usuário postgres para admin
+4 - Importar projeto no eclipse e forçar o update pelo maven
+
+Vamos continuar à partir do projeto da aula passada, aula30:
+
+http://www.cs.bham.ac.uk/~bxb/courses/es1415/sh/h08.pdf
+
+slide 81
+Hibernate Object Life Cycle - Relação entre Transient x Persistent x Detached
+
+o entityManager fará a relação do objeto ao redor da persistência, para os dois lados.
+
+create table "TBL_Contatos"(
+	id serial not null primary key,
+    nome varchar(120) not null,
+    email varchar(150) not null unique,
+    telefone varchar(11) not null
+);
+
+Mesma atividade da aula 30, mas trocamos o DAO para hibernate
+
+Aula33---------------------------------------------------------------------------------------------------------------------------------
+
+eager carrega tudo na primeira busca, faz um select com inner join.
+lazy carrega somente quando precisa, faz query separadas
+
+Exercicio:
+
+Crie uma tabela "Owner" com os seguintes atributos:
+id serial not null primary key,
+nome varchar(100) not null
+
+Crie uma tabela "Child" com os seguintes atributos:
+id serial not null primary key,
+nome varchar(100) not null,
+id_owner int not null,
+foreign key("id_owner") references "Owner"(id)
+
+02) Crie uma classe de mapeamento de entidade para as tabelas criadas anteriormente.
+
+03) Crie um DAO para Child de forma que seja possível realizar as operações de Incluir, atualizar, listarTodos, buscarPorId e remover.
+Obs.: Ao incluir um Child, atualizar ou remover seu Owner deve ser incluido, atualizado ou removido automaticamente.
+
+existe a possibilidade de usar no campo OneToOne(mappedBy="nome_de_alguma_coisa") // indica em qual propriedade que seja mapeado
+
+Livros que podemos ler:
+
+pro JPA2
+
+casadocodigo: JPA eficaz e JSF e JPA
+
+Aula34----------------------------------------------------------------------------------------------------------------------------------------
+
+pgadmin 4:
+
+create table usuarios(
+	id serial not null primary key,
+    nome varchar(120) not null,
+    email varchar(120) not null unique
+);
+
+create table tarefas(
+	id serial not null primary key,
+    titulo varchar(255) not null,
+    tipo varchar(50) not null,
+    "criadoEm" timestamp not null,
+    "atualizadoEm" timestamp not null
+);
+
+Novas anotações do Hibernate
+
+@Enumerated
+EnumType pode ser STRING ou ORDINAL
+
+@Temporal
+TemporalType para tipo TIMESTAMP
+
+@ElementCollection(targetClass = PerfilUsuario.class)
+
+
+alter table tarefas
+add column usuario_id integer;
+alter table tarefas
+add constraint "fk_usuario" foreign key(usuario_id) references usuarios(id);
+
+drop table usuarios_tarefas cascade;
+
+Aula35---------------------------------------------------------------------------------------------------------------------
+
+HQL / Criteria
+
+\\\Select all///
+
+\\\scelect coluna1, coluna2///
+
+\\\Order By///
+
+\\\max///
+
+\\\min///
+
+\\\count///
+
+\\\avg///
+
+\\\ > ///
+
+\\\ >= ///
+
+\\\ < ///
+
+\\\ <= ///
+
+\\\and///
+
+\\\or///
+
+\\\ <> ///
+
+\\\ group by ///
+
+\\\join///
+
+\\\like///
+
+
+create table campeoes(
+	id serial not null primary key,
+    nome varchar(120) not null,
+	idade integer not null
+);
+create table esportes(
+	id serial not null primary key,
+    nome varchar(120) not null,
+    atletas int not null,
+    campeao_id Integer not null,
+	foreign key(campeao_id) references campeoes(id)
+);
+
+Aula36-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Relação Cliente - Servidor
+De cliente para servidor - Request
+De Servidor para Cliente - Response
+
+Como o request é feito:
+http:// - protocolo padrão
+192.168.32.10 - IP(endereço) do servidor
+/books/book.html - Recurso que está sendo requisitado
+
+Qual a reposta esperado?
+book.html
+
+request completo:
+http://192.168.32.10/books/book.html
+
+Quem é o cliente:
+Normalmento o browser!
+O browser conhece HTML, CSS e JavaScript
+
+O que o servidor entende?
+JSF, JSP, NODE, Pearl, Ruby, Python, Asp.net, PHP
+
+O retorno para o cliente geralmente será em html
+
+Baixar o TomCat em casa, é só um .zip
+
+Aula37---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Inicializamos o servlet pela primeria vez.
+talvez eu não lembre tudo, mas acho que foi isso:
+window / preferences / server / server runtime enviroments / add / apache tomcat 8
+Depois lá em baixo ao lado de Problems, Javdoc, Declaration e console deveria ter uma aba Servers, se não tiver, tem que chamar ela em window / show view
+Adicionar servlet e selecionar o tom cat 8
+
+Aprendemos JSP
+Agora vai JSF
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Minha Primeira Aplicação JSF</title>
+</h:head>
+
+<h:body>
+	<h3>JSF 2.2 Hello World Example</h3>
+	<h:form>
+		Seu nome por favor?
+		<h:inputText value="#{helloWorldBean.nome}"></h:inputText>
+		<h:commandButton value="enviar" action="result"></h:commandButton>
+	</h:form>
+</h:body>
+</html>
+
+Aula38------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Depois de importar o maven project, lembrar de configurar o Tom Cat 8!!
+
+Projeto!
+	Tarefa
+		HistóricoTarefa
+	Usuário
+	Situação
+		Backlog
+		Priorizada
+		Em Desenvolvimento
+		Com Problemas
+		Finalizada
+
+forward - é um redirecionamento no servidor, não tem alteração na url para o cliente
+
+Aula39--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tabela - Usuários
+
+create table "Usuários"(
+	id serial not null primary key,
+	nome varchar(120) not null,
+	
+);
+
+Regras para commit - "descrever a terefa que foi feita, ou o que foi adicionado"
+
+tabela projeto - 15 primeiras linhas
+tabela usuário - 16 - 30
+tabela situação - 31 - 45
+
+Eu fiz:
+Usuário - Tabela
+Situação - Repositório
+
+Aula40-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+no projeto aula 37, criamos o pacote br.curso.javacursocontato
+
+Tudo lá dentro é o que estamos aprendendo nessa aula sobre jsf
+
+Lambda is back, my old nemesis!!
+
+Aula41-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Aula42-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+\/\/\/\/\/\/\/\/\/\/\/\/\/\Tarefa para o final de semana\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+Acessar o Prime
+
+Criar um projeto novo
+
+Incorporar o Prime Faces
+
+Selecionar dois itens de cada opção (dois input, dois button, etc até o multimida)
+
+Criar uma aplicação que implemente eles
+
+Criar um Bean que faça essa implementação
+
+\/\/\/\/\/\/\/\/\/\/\/\/\/\Fazer Branch\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+-----------1ºPasso - Criar o Branch-------------
+\\\\Para criar um novo branch:////
+
+git checkout -b <nome da branch>
+
+\\\\Para mandar para o servidor////
+
+git push --set-upstream origin <nome da branch>
+-----------Fim - 1ºPasso-------------
+
+-----------2ºPasso - Atualizar as alterações do bracnh para o master-------------
+Para fazer o merge das alterações do branch para o master, é melhor fazer através do site do github!
+Lá no github:
+pull request
+new pull request
+selecionar destino "base"(master) e origem "compare"(meu branch)
+passos após essa decisão, comentar, commit, merge
+-----------Fim - 2ºPasso-------------
+
+-----------3ºPasso - Atualizar as informações do master para o branch-------------
+\\\\Para voltar para a Master////
+
+git checkout master
+
+\\\\Para trazer o conteúdo do master para o local branch////
+
+git pull origin master
+
+\\\\Para voltar para o branch depois de criado////
+
+git checkout <nome do branch>
+
+\\\\Para atualzair depois do pull do master////
+
+git merge master
+-----------Fim - 3ºPasso-------------
+
+Atividade em casa - com Prime-------------------------------------------------------------------------------------------------------------------------------------
+
+banco de dados:
+
+create database prime
+
+create table ginastas(
+	id serial not null primary key,
+	nome varchar(100) not null,
+	clube varchar(100) not null,
+	idade int not null
+);
+
+from input:
+
+inputtext
+password
+
+output:
+
+button
+link
+
+Data:
+
+DataList
+DataTable - Basic
+
+Panel:
+
+fieldset
+Panel - Basic
+
+Overlay:
+
+Tooltip
+Dialog
+
+Menu:
+
+TabMenu
+Breadcrumb
+
+Charts:
+
+Line
+Bar
+Zoom
+
+Messages:
+
+Growl
+Messages
+
+Multimedia:
+
+Compare
+GraphicImage
+Fade
+
+Aula43-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Eu sou responsável por fazer o Header e o componente Painel Lista de Tarefas
+
+Aula 44 e 45 estive fora =/
+
+Aula46------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Template da listagem

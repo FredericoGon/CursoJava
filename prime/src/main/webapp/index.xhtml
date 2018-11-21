@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Brincando com Prime Faces</title>
+	<h:form>
+		<p:outputLabel value="Escolha o Tema: "></p:outputLabel>
+		<p:themeSwitcher id="basic" style="width:165px"
+			value="#{temaBean.tema}">
+			<f:selectItems value="#{temaBean.temas}" var="tema"
+				itemLabel="#{tema}" itemValue="#{tema}" />
+			<f:ajax />
+		</p:themeSwitcher>
+	</h:form>
+</h:head>
+
+<h:body>
+	<p:tabMenu>
+		<p:menuitem value="index" outcome="index" icon="pi pi-star">
+		</p:menuitem>
+		<p:menuitem value="P.Supresa" outcome="paginaSurpresa" icon="pi pi-search">
+		</p:menuitem>
+		<p:menuitem value="index" outcome="index" icon="pi pi-file">
+		</p:menuitem>
+		<p:menuitem value="P.Supresa" outcome="paginaSurpresa"
+			icon="pi pi-briefcase">
+		</p:menuitem>
+		<p:menuitem value="index" outcome="index" icon="pi pi-user">
+		</p:menuitem>
+	</p:tabMenu>
+	<h3>Brincando com Prime Faces</h3>
+	<h:form>
+		<h:panelGrid columns="2" cellpadding="5">
+			<h:outputLabel value="Id"></h:outputLabel>
+			<p:inputText value="#{ginastaBean.id}" id="id" disabled="true"></p:inputText>
+			<h:outputLabel value="Nome"></h:outputLabel>
+			<h:panelGroup>
+				<p:inputText value="#{ginastaBean.nome}" id="nome"
+					disabled="#{! ginastaBean.podeEditar}" title="Exemplo do focus!"></p:inputText>
+			</h:panelGroup>
+			<h:outputLabel value="Clube"></h:outputLabel>
+			<p:password value="#{ginastaBean.clube}" feedback="true" id="clube"
+				disabled="#{! ginastaBean.podeEditar}"></p:password>
+			<h:outputLabel value="Idade"></h:outputLabel>
+			<p:inputText value="#{ginastaBean.idade}" id="idade"
+				disabled="#{! ginastaBean.podeEditar}"></p:inputText>
+			<h:commandButton value="enviar" action="#{ginastaBean.salvar()}"
+				disabled="#{! ginastaBean.podeEditar}"></h:commandButton>
+			<h:commandButton action="#{ginastaBean.novo()}" value="Novo"></h:commandButton>
+		</h:panelGrid>
+	</h:form>
+	<p:link outcome="paginaSurpresa" value="Link Legal" id="fade">
+	</p:link>
+	<p:tooltip id="toolTipFade" for="fade"
+		value="Clique para adentrar a página surpresa." position="top" />
+	<p:button outcome="paginaSurpresa" value="Botão Legal"
+		icon="pi pi-star" style="margin-right:20px;"
+		title="Como eu queria uma surpresa!">
+	</p:button>
+
+	<div class="content">
+		<p:dataTable value="#{ginastaBean.ginastas}" var="ginasta">
+			<p:column headerText="Id">
+					#{ginasta.id}
+				</p:column>
+			<p:column headerText="Nome">
+					#{ginasta.nome}
+				</p:column>
+			<p:column headerText="Clube">
+					#{ginasta.clube}
+				</p:column>
+			<p:column headerText="Idade">
+					#{ginasta.idade}
+				</p:column>
+		</p:dataTable>
+	</div>
+	<p:dataList value="#{ginastaBean.ginastas}" var="ginasta"
+		type="ordered">
+		<f:facet name="header">
+            Lista de Ginastas usando Prime
+        </f:facet>
+        #{ginasta.id}, #{ginasta.nome}, #{ginasta.clube}, #{ginasta.idade}
+    </p:dataList>
+</h:body>
+</html>

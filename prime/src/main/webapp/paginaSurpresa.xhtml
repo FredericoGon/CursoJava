@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Página Surpresa</title>
+	<h:form>
+		<p:outputLabel value="Escolha o Tema: "></p:outputLabel>
+		<p:themeSwitcher id="basic" style="width:165px"
+			value="#{temaBean.tema}">
+			<f:selectItems value="#{temaBean.temas}" var="tema"
+				itemLabel="#{tema}" itemValue="#{tema}" />
+			<f:ajax />
+		</p:themeSwitcher>
+	</h:form>
+</h:head>
+<h:body>
+
+	<h:form>
+		<p:tabMenu>
+			<p:menuitem value="index" outcome="index" icon="ui-icon-triangle-1-s">
+			</p:menuitem>
+			<p:menuitem value="P.Supresa" outcome="paginaSurpresa"
+				icon="ui-icon-triangle-1-n">
+			</p:menuitem>
+			<p:menuitem value="index" outcome="index" icon="ui-icon-triangle-1-s">
+			</p:menuitem>
+			<p:menuitem value="P.Supresa" outcome="paginaSurpresa"
+				icon="ui-icon-triangle-1-n">
+			</p:menuitem>
+			<p:menuitem value="index" outcome="index" icon="ui-icon-triangle-1-s">
+			</p:menuitem>
+		</p:tabMenu>
+		<p:breadCrumb>
+			<p:menuitem value="Raíz" url="#" />
+			<p:menuitem value="Subpágina1" url="#" />
+			<p:menuitem value="Subpágina2" url="#" />
+			<p:menuitem value="Subpágina3" url="#" />
+			<p:menuitem value="Página Final" url="#" />
+		</p:breadCrumb>
+	</h:form>
+
+	<h1>Página Surpresa!</h1>
+	<h:form>
+		<p:growl id="msgs" showDetail="true" />
+		<p:fieldset legend="Fieldset exemplo!" style="margin-bottom:20px">
+			<h:panelGrid columns="2" cellpadding="5">
+				<p:graphicImage url="/resources/imagens/godfather1.jpg" />
+				<h:outputText
+					value="Don Vito Corleone (Marlon Brando) é o chefe de uma família de Nova York que está feliz, 
+					pois Connie (Talia Shire), sua filha, se casou com Carlo (Gianni Russo). 
+					Porém, durante a festa, Bonasera (Salvatore Corsitto) é visto no escritório de Don Corleone pedindo justiça, 
+					vingança na verdade contra membros de uma quadrilha, que espancaram barbaramente sua filha por ela ter se recusado a fazer sexo para preservar a honra.
+					 Vito discute, mas os argumentos de Bonasera o sensibilizam e ele promete que os homens, 
+					 que maltrataram a filha de Bonasera não serão mortos, pois ela também não foi, mas serão severamente castigados. 
+					 Vito porém deixa claro que ele pode chamar Bonasera algum dia para devolver o favor.." />
+			</h:panelGrid>
+		</p:fieldset>
+
+
+		<p:panel id="basic" header="Panel - Basic" footer="Roda-Pé"
+			style="margin-bottom:20px">
+			<h:panelGrid columns="2" cellpadding="10">
+				<p:graphicImage url="/resources/imagens/godfather1.jpg" />
+				<h:outputText
+					value="Don Vito Corleone (Marlon Brando) é o chefe de uma família de Nova York que está feliz, 
+					pois Connie (Talia Shire), sua filha, se casou com Carlo (Gianni Russo). 
+					Porém, durante a festa, Bonasera (Salvatore Corsitto) é visto no escritório de Don Corleone pedindo justiça, 
+					vingança na verdade contra membros de uma quadrilha, que espancaram barbaramente sua filha por ela ter se recusado a fazer sexo para preservar a honra.
+					 Vito discute, mas os argumentos de Bonasera o sensibilizam e ele promete que os homens, 
+					 que maltrataram a filha de Bonasera não serão mortos, pois ela também não foi, mas serão severamente castigados. 
+					 Vito porém deixa claro que ele pode chamar Bonasera algum dia para devolver o favor.." />
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+	<h:form>
+		<h:panelGrid columns="1" cellpadding="5">
+			<p:commandButton value="Overlay - Effects" type="button"
+				onclick="PF('dlg3').show();" />
+		</h:panelGrid>
+		<p:dialog header="Overlay - Effects - Dialog" widgetVar="dlg3"
+			showEffect="explode" hideEffect="bounce" height="100">
+			<h:outputText value="Efeitos legais aqui." />
+		</p:dialog>
+	</h:form>
+
+	<h:form>
+		<p:growl id="growl" showDetail="true" sticky="true" />
+
+		<p:panel header="Messages - Growl">
+			<h:panelGrid columns="3" cellpadding="5">
+				<p:outputLabel for="msg" value="Message:" />
+				<p:inputText id="msg" value="#{ginastaBean.message}" required="true" />
+				<p:commandButton value="Save" action="#{ginastaBean.saveMessage}"
+					update="@form" />
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+
+	<br />
+
+	<h:form>
+		<p:tooltip />
+		<p:messages id="messages" showDetail="true" closable="true">
+			<p:autoUpdate />
+		</p:messages>
+
+		<p:commandButton value="Info" action="#{ginastaBean.info}" />
+		<p:commandButton value="Warn" action="#{ginastaBean.warn}" />
+		<p:commandButton value="Error" action="#{ginastaBean.error}" />
+		<p:commandButton value="Fatal" action="#{ginastaBean.fatal}" />
+	</h:form>
+
+	<h:form>
+		<br />
+
+		<p:fieldset legend="Gráfico 1" style="margin-bottom:20px">
+			<p:chart type="line" model="#{ginastaBean.lineModel1}"
+				style="height:300px;" />
+		</p:fieldset>
+		<p:fieldset legend="Gráfico 2" style="margin-bottom:20px">
+			<p:chart type="line" model="#{ginastaBean.lineModel2}"
+				style="height:300px;" />
+		</p:fieldset>
+		<p:fieldset legend="Gráfico 3" style="margin-bottom:20px">
+			<p:chart type="bar" model="#{ginastaBean.barModel}"
+				style="height:300px" />
+		</p:fieldset>
+		<p:fieldset legend="Gráfico 4" style="margin-bottom:20px">
+			<p:chart type="bar" model="#{ginastaBean.horizontalBarModel}"
+				style="height:300px" />
+		</p:fieldset>
+		<p:fieldset legend="Gráfico 5 - Zoom" style="margin-bottom:20px">
+			<p:chart type="line" model="#{ginastaBean.zoomModel}"
+				style="height:300px;" widgetVar="chart" />
+			<br />
+			<p:commandButton type="button" value="Reset" icon="pi pi-ban"
+				onclick="PF('chart').resetZoom()" />
+		</p:fieldset>
+	</h:form>
+
+	<h:form>
+		<p:fieldset legend="A muralha da China" style="margin-bottom:20px">
+			<p:graphicImage url="/resources/imagens/china.jpg" width="300px"
+				height="300px" />
+		</p:fieldset>
+	</h:form>
+
+	<div>
+		<h3>Comparação entre imagens</h3>
+		<p:imageCompare leftImage="/resources/imagens/paisa1.jpg"
+			rightImage="/resources/imagens/paisa2.jpg" width="450" height="435" />
+	</div>
+
+	<div>
+		<h3>Galeria</h3>
+		<h:form>
+			<p:galleria value="#{ginastaBean.images}" var="image"
+				panelWidth="401" panelHeight="534" showCaption="true">
+				<p:graphicImage url="resources/imagens/#{image}"
+					alt="Image Description for #{image}" title="#{image}" />
+			</p:galleria>
+		</h:form>
+	</div>
+	<div>
+		<h3>Fade</h3>
+		<p:imageSwitch effect="fade" id="fadeEffect">
+			<ui:repeat value="#{ginastaBean.images}" var="image"
+				id="fadeEffectImages">
+				<p:graphicImage url="resources/imagens/#{image}" id="image" />
+			</ui:repeat>
+		</p:imageSwitch>
+	</div>
+</h:body>
+</html>

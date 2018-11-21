@@ -1,0 +1,337 @@
+Prova 19/10
+
+01) 
+Código:
+
+create database "db_teste2";
+
+02)
+Código:
+
+create table carro(
+id serial not null primary key,
+marca varchar(50) not null,
+modelo varchar(50) not null,
+cor varchar(15) not null,
+ano_fabricacao int not null,
+ano_modelo int  not null,
+placa varchar(7) not null
+);
+
+03)
+Código:
+insert into carro(marca, modelo, cor, ano_fabricacao, ano_modelo, placa)
+values
+('Ford', 'New Fiesta', 'Branco', 2014, 2014, 'DDD0011'),
+('Ford', 'Focus', 'Preto', 2014, 2015, 'FFP0000'),
+('Ford', 'Fusion', 'Prata', 2015, 2015, 'FUP1212'),
+('Fiat', '147', 'Branco', 1983, 1983, 'INU1313'),
+('Fiat', 'Uno', 'Vermelho', 2001, 2001, 'FUV1414'),
+('BMW', '320I', 'Prata', 2015, 2015, 'BMP1616')
+
+04)
+Código:
+select * from carro
+where marca = 'Ford'
+
+05)
+Código:
+select * from carro
+where marca = 'Fiat'
+
+06)
+Código:
+select * from carro
+where ano_fabricacao < 2000
+
+07)
+Código:
+select * from carro
+where ano_modelo = 2015
+
+08)
+Código:
+select * from carro
+where cor = 'Prata'
+
+
+09)
+Código:
+create table "Cargo"(
+    idCargo	integer not null primary key ,
+    "nomeCargo"	VARCHAR(50),
+    "salarioBruto"	DECIMAL(10,2),
+    "descontoSalario"	DECIMAL(10,2)
+);
+
+
+10)
+create table "Colaborador"(
+	idColaborador	integer not null primary key, 
+   	nomeColaborador	VARCHAR(50),
+    	idCargo	integer
+);
+	
+11)
+create table "Colaborador_Ferias"(
+	"idColaborador"	    integer not null,
+    foreign key("idColaborador") references "Colaborador"(idColaborador),
+    data_saida	    date,
+    data_retorno    date 
+);
+	
+12) insert into "Cargo"(idCargo, "nomeCargo", "salarioBruto", "descontoSalario")
+values
+(1, 'Estagiário', 850.00, 0.00),
+(2, 'Desenvolvedor Java Júnior - SE', 1150.00, 250.00),
+(3, 'Desenvolvedor Java Pleno - SE', 1900.00, 400.00),
+(4, 'Desenvolvedor Java Senior  - SE', 3000.00, 600.00),
+(5, 'Designer Gráfico', 1580.00, 360.00),
+(6, 'Analista de Marketing', 2400.00, 420.00),
+(7, 'Desenvolvedor Java Web Júnior', 1230.00, 260.00),
+(8, 'Desenvolvedor Java Web Pleno', 2170.00, 680.00),
+(9, 'Desenvolvedor Java Senior', 3400.00, 700.00),
+(10, 'Suporte Nível 1', 900.00, 120.00),
+(11, 'Suporte Nível 2', 1600.00, 360.00),
+(12, 'Suporte Nível 3', 2100.00, 475.00),
+(13, 'Web Master Nivel 1', 1500.00, 356.00),
+(14, 'Web Master Nível 2', 2350.00, 580.00),
+(15, 'Web Master Nível 3', 3600.00, 720.00),
+(16, 'Analista de Projetos', 5000.00, 1020.00),
+(17, 'Arquiteto de Software', 8000.00, 1900.00),
+(18, 'Arquiteto de Software', 7500.00, 1750.00),
+(19, 'Implantador de Sistemas', 4600.00, 850.00),
+(20, 'Desenvolvedor Java Mobile', 6000.00, 980.00)
+
+13)
+
+Insert into "Colaborador"(idcolaborador, nomecolaborador, idcargo)
+values
+(1, 'Daiana Cristina', null),
+(2, 'Andréas Silver', 5),
+(3, 'Juliana Ribeiro', 13),
+(4, 'Amanda Schultz', 7),
+(5, 'Cristiana Lobo', 10),
+(6, 'Brenda Alvarez', 6),
+(7, 'Carla Oliveira', 16),
+(8, 'Orlando Pamplona', 19),
+(9, 'Alex Marques', 18),
+(10, 'Santhyago Alves', 20),
+(11, 'Júlio César', 1),
+(12, 'Diego de Lima', 20),
+(13, 'Cleberson Kist', 6),
+(14, 'Everton Duarte', 9),
+(15, 'Vanessa Montres', 5),
+(16, 'Bianca Vasconselos', 15),
+(17, 'Daniel Silva', 11),
+(18, 'Ellen Moreira', 17),
+(19, 'Tatiana Holtrup', 3),
+(20, 'Viviane de Souza', 14),
+(21, 'Paloma Oliveira', 20),
+(22, 'Jéssica Mattos', 2),
+(23, 'Óliver Duvivier', 4),
+(24, 'Luana Silveira', 1),
+(25, 'Jennifer Verciani', 5),
+(26, 'Mariana Nascimento', 8),
+(27, 'Mônica Silvestre', 11),
+(28, 'Gabriela Novaes', 12),
+(29, 'George Marcel', 15),
+(30, 'Emanuela Gonzales', 1),
+(31, 'Emanuela Gonzales', 20),
+(32, 'Priscila Medeiros', 12),
+(33, 'Bruna Conceição', 4),
+(34, 'Andriane Coelho', 7),
+(35, 'Rebeca Bortolato', 15),
+(36, 'Hellen Cristiana', 18),
+(37, 'Gustavo Souza', 5),
+(38, 'Élton Civieiro', 4),
+(39, null, 17),
+(40, 'Ramon Duarte', 20),
+(41, 'Fernando Duve', 3),
+(42, null, 6),
+(43, 'Patrícia Alves', 16),
+(44, 'Larissa Torres', 7),
+(45, 'Elisiane Peris', 13)
+
+14)
+insert into "Colaborador_Ferias"("idColaborador", data_saida, data_retorno)
+values
+(1, '2014-01-03', '2014-02-03'),
+(2, '2014-01-03', '2014-02-03'),
+(3, '2014-01-03', '2014-02-03'),
+(4, '2014-01-03', '2014-02-03'),
+(5, '2014-01-03', '2014-02-03'),
+(6, '2014-01-03', '2014-02-03'),
+(7, '2014-01-03', '2014-02-03'),
+(8, '2014-02-04', '2014-03-07'),
+(9, '2014-02-04', '2014-03-07'),
+(10, '2014-02-04', '2014-03-07'),
+(11, '2014-02-04', '2014-03-07'),
+(12, '2014-02-04', '2014-03-07'),
+(13, '2014-02-04', '2014-03-07'),
+(14, '2014-02-04', '2014-03-07'),
+(15, '2014-03-08', '2014-04-08'),
+(16, '2014-03-08', '2014-04-08'),
+(17, '2014-03-08', '2014-04-08'),
+(18, '2014-03-08', '2014-04-08'),
+(19, '2014-03-08', '2014-04-08'),
+(20, '2014-03-08', '2014-04-08'),
+(40, '2014-10-03', '2014-11-03'),
+(41, '2014-10-03', '2014-11-03'),
+(43, '2014-10-03', '2014-11-03'),
+(44, '2014-10-03', '2014-11-03'),
+(45, '2014-10-03', '2014-11-03')
+
+15) 
+delete from "Colaborador"
+where nomecolaborador is null
+
+16)
+select
+"Colaborador".nomecolaborador,
+"Cargo"."salarioBruto"
+from "Colaborador"
+inner join "Cargo" on "Colaborador".idcargo = "Cargo".idcargo
+where "salarioBruto" > 1500
+
+
+
+17)
+select
+"Colaborador".nomecolaborador,
+"Cargo"."salarioBruto"
+from "Colaborador"
+inner join "Cargo" on "Colaborador".idcargo = "Cargo".idcargo
+where "salarioBruto" < 1300
+
+
+18)
+select
+"Colaborador".nomecolaborador,
+"Cargo"."descontoSalario"
+from "Colaborador"
+inner join "Cargo" on "Colaborador".idcargo = "Cargo".idcargo
+where "descontoSalario" > 500
+
+19)
+select
+"Colaborador".nomecolaborador,
+"Cargo"."nomeCargo"
+from "Colaborador"
+inner join "Cargo" on "Colaborador".idcargo = "Cargo".idcargo
+
+20)
+select
+"Colaborador".nomecolaborador,
+"Cargo"."nomeCargo"
+from "Colaborador"
+inner join "Cargo" on "Colaborador".idcargo = "Cargo".idcargo
+where "nomeCargo" like '%Java%'
+
+
+21) Crie uma consulta dos Colaboradores que não tiveram férias   ///////
+select
+"Colaborador".nomeColaborador,
+"Colaborador_Ferias".data_saida
+from "Colaborador"
+inner join "Colaborador_Ferias" on "Colaborador".idColaborador = "Colaborador_Ferias"."idColaborador"
+
+22) Crie uma consulta que busque os colaboradores que  tiraram férias no mês de Janeiro de 2014   //////
+select
+"Colaborador".nomeColaborador,
+"Colaborador_Ferias".data_saida
+from "Colaborador"
+inner join "Colaborador_Ferias" on "Colaborador".idColaborador = "Colaborador_Ferias"."idColaborador"
+--where to_char('data_saida', MM) = 01
+
+
+23) Crie uma consulta que busque os colaboradores que  tiraram férias no mês de Março de 2014
+24) Crie uma consulta que busque os colaboradores que  tiraram férias no mês de outubro de 2014
+25) Crie uma consulta que busque os colaboradores que  tiraram férias em 2014
+26) Crie uma consulta que busque o cargo dos colaboradores que tiraram férias no mês de Março de 2014
+
+27)
+create table "Produtos"(
+	id serial not null primary key,
+    nome varchar(100) not null,
+    valor integer not null
+);
+
+28)
+insert into "Produtos"(nome, valor)
+values
+('Televisao LED 42', 1400.40),
+('Televisao LED 32', 1250.30),
+('Aparelho de Jantar Tramontina', 800.00),
+('Playstation 4', 2400.40),
+('Playstation 3', 720.99),
+('Sofa', 2400.60),
+('Fritadeira elétrica', 200),
+('Forno Microondas 20l', 630.90),
+('Banheira Hidromassagem G', 19999.90),
+('Roupeiro 6 portas', 1110.10),
+('Notebook Del vostro', 2200.40),
+('IPhone 6S', 3500.23)
+
+29)
+select * from "Produtos"
+where valor > 1000 and valor < 2000
+ 
+30)
+select * from "Produtos"
+order by nome asc
+
+31)
+select * from "Produtos"
+order by nome desc
+
+32)
+select * from "Produtos"
+where nome like '%Televisao%'
+
+33)
+select * from "Produtos"
+where nome like '%Playstation%'
+
+ 
+34)
+select * from "Produtos"
+where nome like '%G%'
+
+35)
+select * from "Produtos"
+order by valor asc
+ 
+36)
+select * from "Produtos"
+order by valor desc
+
+37)
+select count(*) from "Produtos"
+
+38)
+select avg(valor) from "Produtos"
+
+39)
+select sum(valor) from "Produtos"
+
+40)
+select min(valor) from "Produtos"
+
+41)
+select * from "Produtos"
+where valor = (select min(valor) from "Produtos")
+
+43)
+select max(valor) from "Produtos"
+
+44)
+select * from "Produtos"
+where valor = (select max(valor) from "Produtos")
+
+45) Selecione os produtos com preço maior ou igual a média de preços.
+46) Selecione os produtos cujo o nome possua 6 ou mais caracteres.
+47) Selecione o nome, o preço, e o preço com desconto de todos os produtos. O preço com desconto deve ser calculado aplicando um desconto de 15% ao preço atual de cada produto.
+48)Selecione os 5 primeiros caracteres do nome de cada produto.
+49)Selecione os produtos com valor baixo de 500 reais.
+50) selecione a média dos produtos que possuem o preço entre 100 e 1000 reais.

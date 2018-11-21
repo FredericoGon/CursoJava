@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Componentes JSF</title>
+</h:head>
+
+<h:body>
+	<h3>
+		Componentes JSF!
+		<h:outputFormat value="{0} conheça os principais componente">
+			<f:param value="#{componentesBean.nome}"></f:param>
+		</h:outputFormat>
+	</h3>
+	<h:form>
+		<h:panelGrid columns="2">
+			<f:facet name="header">
+				<h:outputText value="Meu Cadastro" />
+			</f:facet>
+			<h:outputLabel for="nome">Nome</h:outputLabel>
+			<h:panelGroup>
+				<h:inputText id="nome" size="50" value="#{componentesBean.nome}" />
+				<h:outputText value="#{componentesBean.nome}" />
+			</h:panelGroup>
+
+			<h:outputLabel for="senha">Senha</h:outputLabel>
+			<h:panelGroup>
+				<h:inputSecret id="senha" size="50" value="#{componentesBean.senha}" />
+				<h:outputText value="#{componentesBean.senha}" />
+			</h:panelGroup>
+			<h:outputLabel for="descricao">Descrição </h:outputLabel>
+
+			<h:panelGroup>
+				<h:inputTextarea value="#{componentesBean.descricao}" cols="51"></h:inputTextarea>
+				<h:outputText value="#{componentesBean.descricao}" />
+			</h:panelGroup>
+
+			<h:outputLabel for="cidades">Cidades</h:outputLabel>
+			<h:selectOneListbox>
+				<f:selectItems value="#{componentesBean.cidades}"></f:selectItems>
+			</h:selectOneListbox>
+
+			<h:outputLabel for="cidades">Cidades</h:outputLabel>
+			<h:selectOneMenu>
+				<f:selectItems value="#{componentesBean.cidades}"></f:selectItems>
+			</h:selectOneMenu>
+
+			<h:outputLabel for="cidades">Cidades</h:outputLabel>
+			<h:selectManyMenu>
+				<f:selectItems value="#{componentesBean.cidades}"></f:selectItems>
+			</h:selectManyMenu>>
+			
+			<h:outputLabel>Concluir</h:outputLabel>
+			<h:panelGroup>
+				<h:selectBooleanCheckbox value="#{componentesBean.concluido}"></h:selectBooleanCheckbox>
+				#{componentesBean.concluido}
+			</h:panelGroup>
+			<p></p>
+			<h:panelGroup>
+				<h:commandButton value="salvar" action="#{componentesBean.salvar()}"></h:commandButton>
+				<h:button value="limpar"></h:button>
+			</h:panelGroup>
+		</h:panelGrid>
+
+	</h:form>
+	
+	<h:graphicImage value="../resources/transpobrasil/image.jpeg"></h:graphicImage>
+	
+</h:body>
+</html>

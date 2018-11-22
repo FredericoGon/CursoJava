@@ -2528,3 +2528,8 @@ e-mail:
 						</p:inputText>
 						<p:message for="email" id="messageEmail" />
 
+Aula48----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+new project
+
+Estudar FacesContext do JSF (faz a conexão com o mundo externo)

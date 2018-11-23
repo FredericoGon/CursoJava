@@ -2528,8 +2528,24 @@ e-mail:
 						</p:inputText>
 						<p:message for="email" id="messageEmail" />
 
+fiz o business de usuário
+
 Aula48----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 new project
 
 Estudar FacesContext do JSF (faz a conexão com o mundo externo)
+
+Fizemos o filter
+
+Aula49-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Continuamos no projeto Tarefa-App
+
+Projeto - Remover não está funcionando
+
+
+Projetos - corrigir
+
+buscas com data de remoção nula apenas.(feito)
+quem faz a mudança para inativo é o repositório e não o Facade (feito)

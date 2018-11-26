@@ -2549,3 +2549,13 @@ Projetos - corrigir
 
 buscas com data de remoção nula apenas.(feito)
 quem faz a mudança para inativo é o repositório e não o Facade (feito)
+
+Aula50---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Finalizar o projeto hoje!
+
+testar o projeto, listar, inserir, editar (feito)
+
+incluir a edição através de clicar no nome - naslistagem de projetos (feito)
+
+Aparecer o usuário logado dentro do header em todos os templates

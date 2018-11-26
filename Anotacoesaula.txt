@@ -2558,4 +2558,43 @@ testar o projeto, listar, inserir, editar (feito)
 
 incluir a edição através de clicar no nome - naslistagem de projetos (feito)
 
-Aparecer o usuário logado dentro do header em todos os templates
+Aparecer o usuário logado dentro do header em todos os templates (feito)
+
+Problemas de SEO:
+
+dois H1, ausência de body, texto direto em div
+
+\\\\\\\\\\\\\\\\\\\\\\\\\Sugestões do que falta://///////////////////
+
+adicionar sortBy nas listagens para sempre ficar por ordem de ID;
+inserir o header-page no template geral ou substituir pelo template-Login;
+arrumar o breadscrumb;
+botão anexar na dashboard no componente tarefa;
+em tarefas é permitido acessar sem usuário cadastrado;
+selecionar projeto na dashboard;
+somente desativar
+
+
+buttonLink SAIR add <form>
+
+Form Tarefas
+> btn Listar ir para Dashboard
+
+
+GERAL
+>Aba Status em Todos
+>Add Template na Dashboard
+>Verificar se todos os métodos que abrem conexão estão fechando.
+
+> Usuário > Novo > Validar o campo senha
+
+Pesquisar: Open Session in View (tarefa valendo nota)
+
+
+
+
+-----------------------------------------------------------
+|                                                                     |
+|COMO VOCÊ QUER SER CONHECIDO ? |
+|                                                                     |
+-----------------------------------------------------------

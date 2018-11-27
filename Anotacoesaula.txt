@@ -2643,3 +2643,7 @@ json -
 "email":"f@teste.com",
 "telefone":"33221144"
 }] // as []são para definir lista e{}para objetos
+
+JAVA EE - é um conjunto de especificações
+
+JAXRS -é a especificação decomo se cria um api rest em Java EE, a referência é a Jersey

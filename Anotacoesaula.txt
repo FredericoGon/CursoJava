@@ -2607,3 +2607,39 @@ https://pt.stackoverflow.com/questions/22215/por-que-o-pattern-open-session-in-v
 O que são cookies:
 https://www.techtudo.com.br/noticias/2018/10/o-que-sao-cookies-entenda-os-dados-que-os-sites-guardam-sobre-voce.ghtml
 
+Aula51-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Rest
+REpresentational
+State
+Transfer
+modelo de comunicação entre webservice, que se utiliza dos protocolos http
+
+Webservers - Sopa(Antigo)
+           - Rest(novo)
+
+\\\\\\ HTTP - Rest //////
+
+Get
+Post
+Put
+Delete
+
+Options
+Patch
+Head
+
+xml - 
+<contato>
+	<nome>Fred</nome>
+	<id>1</id>
+	<email>f@teste.com</email>
+	<telefone>33221144</telefone>
+</contato>
+json -
+[{
+"nome":"Fred",
+"ID":1,
+"email":"f@teste.com",
+"telefone":"33221144"
+}] // as []são para definir lista e{}para objetos

@@ -2647,3 +2647,13 @@ json -
 JAVA EE - é um conjunto de especificações
 
 JAXRS -é a especificação decomo se cria um api rest em Java EE, a referência é a Jersey
+
+Aula52--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Fomo na Transpo
+
+Aula53---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Instalamos NodeJs
+
+Usamos os comandos nessa página para instalar o Angular através do terminal integrado do visual code: https://cli.angular.io/

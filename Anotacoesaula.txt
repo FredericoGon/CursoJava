@@ -2657,3 +2657,16 @@ Aula53--------------------------------------------------------------------------
 Instalamos NodeJs
 
 Usamos os comandos nessa página para instalar o Angular através do terminal integrado do visual code: https://cli.angular.io/
+
+Criamos um arquivo chamado proxy-conf.json com esse conteúdo:
+
+{
+    "/api":{
+        "target":"http://localhost:8080/aula51/api",
+        "secure":false
+    }
+}
+
+fomos até a pasta desejada pelo terminal integrado cd contatos-app
+utilizamos esse comando no terminalintegrado: ng serve --proxy-config proxy-conf.json
+

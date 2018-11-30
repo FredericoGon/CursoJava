@@ -2662,11 +2662,35 @@ Criamos um arquivo chamado proxy-conf.json com esse conteúdo:
 
 {
     "/api":{
-        "target":"http://localhost:8080/aula51/api",
-        "secure":false
+        "target":"http://localhost:8080/aula51",
+        "secure":false,
+        "changeOrigin": true,
+        "logLevel": "info"
     }
 }
 
 fomos até a pasta desejada pelo terminal integrado cd contatos-app
 utilizamos esse comando no terminalintegrado: ng serve --proxy-config proxy-conf.json
 
+Aula54---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Para atualizar o projeto hoje fizemos quase todo o processo anterior,mas ao invés de usar o new para ele fazer um novo projeto e baixar tudo, utilizamos esse comando:
+
+npm install
+
+para instalar todos os pacotes
+
+React / Angular / uuejs
+SPA (Single Page Application) - AJAX
+
+instalamos a Bulma, framework de css através desse comando:
+
+npm install --save bulma
+
+documentation do Bulma:
+
+https://bulma.io/documentation/layout/section/
+
+
+ng g c contato-list // para gerar component
+ng g s contato // para gerar um service

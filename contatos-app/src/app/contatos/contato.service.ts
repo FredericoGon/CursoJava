@@ -14,4 +14,8 @@ export class ContatoService {
     return this.http.get<Contato[]>('/api/contatos');
   }
 
+  buscarContatoPorId(id: any): Observable<Contato> {
+    return this.http.get<Contato>(`/api/contatos/${id}`)
+  }
+
 }

@@ -2650,7 +2650,7 @@ JAXRS -é a especificação decomo se cria um api rest em Java EE, a referência é a
 
 Aula52--------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Fomo na Transpo
+Fomos na Transpo
 
 Aula53---------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2674,7 +2674,7 @@ utilizamos esse comando no terminalintegrado: ng serve --proxy-config proxy-conf
 
 Aula54---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Para atualizar o projeto hoje fizemos quase todo o processo anterior,mas ao invés de usar o new para ele fazer um novo projeto e baixar tudo, utilizamos esse comando:
+Para atualizar o projeto hoje fizemos quase todo o processo anterior, mas ao invés de usar o new para ele fazer um novo projeto e baixar tudo, utilizamos esse comando:
 
 npm install
 
@@ -2694,3 +2694,6 @@ https://bulma.io/documentation/layout/section/
 
 ng g c contato-list // para gerar component
 ng g s contato // para gerar um service
+
+Aula55--------------------------------------------------------------------------------------------------------------------------------------------------------
+

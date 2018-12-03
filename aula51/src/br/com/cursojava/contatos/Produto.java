@@ -2,23 +2,26 @@ package br.com.cursojava.contatos;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name= "Contato")
-public class Contato {
+@XmlRootElement(name= "Produto")
+public class Produto {
 	
 	private Integer id;
 	private String nome;
-	private String email;
-	private String telefone;
-	
-	public Contato() {
+	private String descricao;
+	private Integer preco;
+	public Produto() {
 		super();
 	}
-	public Contato(Integer id, String nome, String email, String telefone) {
+	public Produto(Integer id, String nome, String descricao, Integer preco) {
 		super();
 		this.id = id;
 		this.nome = nome;
-		this.email = email;
-		this.telefone = telefone;
+		this.descricao = descricao;
+		this.preco = preco;
+	}
+	@Override
+	public String toString() {
+		return "Produto [id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", preco=" + preco + "]";
 	}
 	public Integer getId() {
 		return id;
@@ -32,21 +35,17 @@ public class Contato {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getEmail() {
-		return email;
+	public String getDescricao() {
+		return descricao;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
-	public String getTelefone() {
-		return telefone;
+	public Integer getPreco() {
+		return preco;
 	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
-	@Override
-	public String toString() {
-		return "Contato [id=" + id + ", nome=" + nome + ", email=" + email + ", telefone=" + telefone + "]";
+	public void setPreco(Integer preco) {
+		this.preco = preco;
 	}
 	@Override
 	public int hashCode() {
@@ -63,15 +62,13 @@ public class Contato {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Contato other = (Contato) obj;
+		Produto other = (Produto) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
-	}
-	
-	
+	}	
 
 }

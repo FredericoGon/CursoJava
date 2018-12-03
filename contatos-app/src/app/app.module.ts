@@ -6,13 +6,17 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContatoFormComponent } from './contatos/contato-form/contato-form.component';
+import { ProdutoFormComponent } from './produtos/produto-form/produto-form.component';
 import { ContatoListComponent } from './contatos/contato-list/contato-list.component';
+import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContatoFormComponent,
-    ContatoListComponent
+    ContatoListComponent,
+    ProdutoFormComponent,
+    ProdutoListComponent
   ],
   imports: [
     BrowserModule,

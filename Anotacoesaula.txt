@@ -2697,3 +2697,19 @@ ng g s contato // para gerar um service
 
 Aula55--------------------------------------------------------------------------------------------------------------------------------------------------------
 
+this.contatos = this.contatos.map(c => c.id != id);
+          alert('contato removido com sucesso')
+
+
+id
+nome
+descrição
+preço
+
+rest
+buscar por id
+buscartodos
+atualizar
+inserir remover
+
+front end

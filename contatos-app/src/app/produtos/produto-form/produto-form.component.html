@@ -1,0 +1,36 @@
+<div>
+
+  <div>
+    <form [formGroup]="produtoForm" (ngSubmit)="onSubmit()">
+      <div class="field">
+        <label class="label">Id</label>
+        <div class="control">
+          <input class="input" type="text" readonly formControlName="id">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Nome</label>
+        <div class="control">
+          <input class="input" type="text" formControlName="nome" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Descrição</label>
+        <div class="control">
+          <input class="input" type="text" formControlName="descricao" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Preco</label>
+        <div class="control">
+          <input class="input" type="text" formControlName="preco" required>
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <button type="submit" class="button is-success is-fullwidth">Salvar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

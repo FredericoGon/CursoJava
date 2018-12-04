@@ -1,0 +1,17 @@
+.title, .subtitle{
+  text-align: center;
+}
+div {
+  background-color: lightblue;
+}
+.box{
+  background-color: lightgray;
+}
+td{
+  background-color: lightblue;
+}
+th{
+  background-color: lightslategray;
+  color: white;
+}
+

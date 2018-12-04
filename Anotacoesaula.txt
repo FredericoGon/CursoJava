@@ -2624,6 +2624,7 @@ Get
 Post
 Put
 Delete
+(isso são endpoints)
 
 Options
 Patch
@@ -2713,3 +2714,63 @@ atualizar
 inserir remover
 
 front end
+
+Aula56---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Aprendendo a ter projetos dentro de projetos
+
+criar um projeto pai - normal
+	transformar ele em maven project e escolher package "pom"
+	Incluir os modulos no pom:
+		<modules>
+			<module>../apptarefas<module>
+			<module>../app-tarefas-dao<module>
+			<module>../app-tarefas-facade<module>
+			<module>../apptarefas-endpoint-rest<module>
+		</modules>
+	alterar o pom dos filhos,incluindo parent:
+	<parent>
+		<groupid> // copiar do pom do pai
+		<artifactId> // copiar do pom do pai
+		<version> // copiar do pom do pai
+		<relativePath>../app-parent/pom.xml</relativePath>
+	</parent>
+	pode eliminar groupid e version dos filhos
+	no apptarefas,no pom dele, adicionar a dependencia:
+	<dependency>
+		<dependecies>
+			//adionar o app tarefas facade
+		</dependecies>
+	</dependency>
+	// criou uma class no facade com o metodo mensagem()
+	no homebean do apptarefas colocar:
+	private HelloFacade facade = new HelloFacade();
+
+	public String getMenasagem(){
+		return facade.mensagem():
+	}
+	app-parent -- buildar (run - maven intall) // tem que ver alguma coisa relaciona ao jdk ao invés do jre
+	fazer update no apptarefas
+
+entidades para o DAO
+os facades para o facade
+business para o business
+
+	endpoints de login
+validação
+
+
+logoff
+http.invalidate
+
+os teste para o rest podem ser feitos através de uma extension no google chrome, como este:
+
+chrome-extension://aejoelaoggembcahagimdiliamlcdmfm/restlet_client.html
+
+Lá você precisa escrever na forma de json,segue um exemplo:
+
+{
+  "email":"meuEmail",
+  "senha":"minhaSenha"
+}
+

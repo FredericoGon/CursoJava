@@ -2774,3 +2774,19 @@ Lá você precisa escrever na forma de json,segue um exemplo:
   "senha":"minhaSenha"
 }
 
+Aula57-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+para testar na chrome extension
+
+https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo/related?hl=pt-BR
+
+http://localhost:8080/apptarefas-endpoint-jaxrs/api/autenticacao/logoff
+http://localhost:8080/apptarefas-endpoint-jaxrs/api/autenticacao/login
+
+Recebemos feedback individuais
+
+Tópicos de pesquisa:
+
+Solid
+assincrona
+modelos de projetos
